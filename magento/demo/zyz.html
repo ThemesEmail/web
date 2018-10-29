@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Zyz - Magento Email Template</title>
+        <meta name="description" content="Email Template for Magento." />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <style type="text/css">
+            #outlook a {
+                padding: 0;
+            }
+            .ReadMsgBody {
+                width: 100%;
+            }
+            .ExternalClass {
+                width: 100%;
+            }
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+                line-height: 100%;
+            }
+            blockquote .original-only, .WordSection1 .original-only {
+                display: none !important;
+            }
+            .appleLinkIgnore a {
+                color: #222222;
+                text-decoration: none;
+            }
+            .appleFooter a {
+                color: #797979;
+                text-decoration: none;
+            }
+            @media screen and (max-width: 630px) {
+                table[class="wrapper"] {
+                    width: 100% !important;
+                }
+                td[class="logo"] {
+                    text-align: left !important;
+                    padding: 0 !important;
+                }
+                td[class="logo"] img {
+                    margin: 0 auto !important;
+                    text-align: center !important;
+                    display: block !important;
+                }
+
+
+                .mobile-hide {
+                    display: none !important;
+                    overflow: hidden !important;
+                    float: left !important;
+                    font-size: 1px !important;
+                    line-height: 1px !important;
+                    max-width: 0 !important;
+                    opacity: 0 !important;
+                    color: #ffffff !important;
+                }
+                .responsive-table {
+                    width: 100% !important;
+                }
+                .text-padding-left {
+                    padding-left: 5% !important;
+                }
+                .text-padding-right {
+                    padding-right: 5% !important;;
+                }
+                .standard-line {
+                    padding: 10px 0 14px 0 !important;
+                    line-height: 24px !important;
+                }
+                .list {
+                    padding: 5px 22px 16px 0;
+                    line-height: 24px;
+                }
+
+                .mobile-no-padding {
+                    padding: 0 0 0 0 !important;
+                }
+                .header {
+                    height: 120px !important;
+                }
+
+                td[class="heading"] {
+                    padding: 35px 0 9px 0 !important;
+                    font-size: 36px !important;
+                    line-height: 48px !important;
+                    text-align: left !important;
+                }
+                .label {
+                    font-size: 12px !important;
+                    line-height: 12px !important;
+                    padding: 7px 0 5px 0 !important;
+                }
+
+                .body-text-small {
+                    color: #222222 !important;
+                }
+
+                .body-text {
+                    color: #222222 !important;
+                    text-align: left !important;
+                    font-size: 13px !important;
+                }
+
+
+                .footer-links {
+                    letter-spacing: 0 !important;
+                    font-weight: 600 !important;
+                    padding: 34px 55px 0 55px !important;
+                }
+
+                .footer-copy {
+                    font-size: 11px !important;
+                    padding-top: 7px !important;
+                    padding-bottom: 22px !important;
+                }
+
+                .footer img {
+                    padding: 5px 0 44px 0 !important;
+
+                }
+
+                td[class="mobile-wrapper"] {
+                    padding: 10px 5% 15px 5% !important;
+                }
+
+                table[class="mobile-button-container"] {
+                    margin: 0 auto !important;
+                    width: 100% !important;
+                } 
+                .large-padding-bottom {
+                    padding-bottom: 29px !important;
+                }
+                .header {
+                    height: 120px !important;
+                }
+                .full-width img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+                .image-heading {
+                    padding-left: 22px !important;
+                }
+                .two-column img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+                .list {
+                    padding: 5px 22px 16px 0 !important;
+                    line-height: 24px !important;
+                }
+                .mobile-show {
+                    display: table-cell !important;
+                    width: 100% !important;
+                    height: auto !important;
+                    line-height: 22px !important;
+                    max-height: 616px !important;
+                    max-width: 616px  !important;
+                    opacity: 1 !important;
+                    overflow: visible;
+                }
+                .mobile-show img {
+                    display: block !important;
+                    width: 100% !important;
+                    height: auto !important;
+                    line-height: 22px !important;
+                    max-height: 616px !important;
+                    max-width: 616px  !important;
+                    opacity: 1 !important;
+                    overflow: visible;
+                }
+                .left-column-text {
+                    padding: 22px 5% !important;
+                }
+                .right-column-text {
+                    padding: 22px 5% !important;
+                }
+            }
+            table {
+                border-collapse: collapse;
+            }
+            
+            
+                            @media all and (max-width: 480px) {
+
+                    .email-items { text-align: center;}
+                    .email-items tbody td { display: block; width: 100% !important;}
+                    .item-thumbnail img { margin: 0 auto; width: 300px;}
+                    .item-info {border-top: 0px !important; text-align: center;}
+                    .item-price {border-top: 0px !important; text-align: center !important;}
+
+                    .email-items tfoot th { display: block; width: auto !important; text-align: center !important; padding: 9px !important; padding-bottom: 0px !important;}
+                    .email-items tfoot td { display: block; width: auto !important; text-align: center !important; padding: 9px !important;}
+
+                }
+            
+        </style>
+    </head>
+
+    <body style=" background-color:#EDEDED;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;height: 100% !important;margin: 0;padding: 0;width: 100% !important; overflow-x: hidden" bgcolor="#EDEDED"> 
+        <span class="hidden remove-from-plain-text" style="display: none;font-size: 1px;line-height: 1px;max-width: 0;max-height: 0;min-width: 0;min-height: 0;height: 0;width: 0;opacity: 0;overflow: hidden;color: #ffffff;"></span>
+        <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+        <table align="center" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;min-width: 100%" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <td class="mobile-hide" height="44" bgcolor="#EDEDED" colspan="3" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"></td>
+                </tr>
+                <tr>
+                    <td class="mobile-hide spacer" width="58" bgcolor="#EDEDED" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;min-width: 10px;width: 1%;"></td>
+                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                            <tbody>
+                                <tr>
+                                    <td height="115" align="center" class="mobile-no-padding header-wrapper" bgcolor="#EDEDED" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="616" class="wrapper" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2" width="616" bgcolor="#DADADA" class="empty-cell" height="5" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;font-size: 5px;line-height: 5px;max-height: 5px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="110" bgcolor="#ffffff" class="logo" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <table class="mobile-no-padding header" border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;height: 110px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="mobile-no-padding text-padding-left" height="110" width="180" align="left" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-left: 58px; vertical-align: middle;">
+                                                                        <a href="https://themes.email/" target="_blank" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #000000;">
+                                                                            <img alt="logo" width="161" height="23" border="0" src="https://s3.amazonaws.com/templates.themes.email/zyz/logo2x.png" style="padding-top: 3px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;"
+                                                                                 />
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="mobile-hide mobile-no-padding text-padding-right" width="450" height="110" align="right" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-right: 58px; vertical-align: middle;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="right" class="category-wrapper" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-bottom: 2px;">
+                                                                                        <span class="category-heading" style="color: #3e3e3e;text-decoration: none;text-transform: uppercase;padding: 6px 0 5px 0;letter-spacing: 2px;line-height: 22px;font-weight: 400;font-size: 11px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">the #1 marketplace</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                            <tbody>
+                                <tr>
+                                    <td bgcolor="#EDEDED" align="center" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="616" class="gmail-spacer responsive-table" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td bgcolor="#F7F7F7" class="text-padding-left text-padding-right large-padding-bottom" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-left: 58px;padding-bottom: 44px;padding-right: 58px;">
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="spacer" height="22" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;min-width: 10px;width: 1%;"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="spacer" height="22" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;min-width: 10px;width: 1%;"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td id="emailcontent" align="left" class="standard-line body-text" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding: 6px 0 16px 0;line-height: 22px;font-weight: 400;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 13px;letter-spacing: 0.02em;color: #555555;text-align: left;">
+                                                                                        <!--  Here Goes Content: Start  -->
+                                                                                        <table style="border-collapse:collapse;width:100%">
+<tbody><tr class="email-summary">
+<td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;text-align:center;padding-top:20px;padding-bottom:10px">
+            <h1 style="font-weight:bold;line-height:1.1;font-size:25px;margin-top:0;margin-bottom:4px;border-bottom:0;padding-bottom:0;color:#797979">
+<span>Thanks</span> for your order John</h1>
+            <h3 style="font-weight:300;line-height:1.1;font-size:17px;margin-top:18px;margin-bottom:9px">Order #<span class="no-link" style="font-weight:bold;color:#797979">000000001</span>
+</h3>
+        </td>
+    </tr>
+<tr class="email-information">
+<td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top">
+            <table class="email-items" style="border-collapse:collapse;width:100%;border-spacing:0;max-width:100%;margin-bottom:30px;border:0">
+<thead><tr>
+<th class="item-info" colspan="3" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-align:left;vertical-align:bottom;padding:9px;font-size:11px;font-weight:300;text-transform:uppercase;background-color:none">
+                Items            </th>
+        </tr></thead>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;border-top:1px solid #dadada;width:135px">
+        <img src="../../img/met/thumbnails/freelift_gradient.jpg" title="Freelift Gradient" alt="Freelift Gradient" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#797979;font-size:15px;line-height:1.2">Freelift Gradient</p>
+        <p class="sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0001-M</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada;text-align:right;color:#797979;font-size:15px;font-weight:bold">
+        
+        <span class="price">$39.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;border-top:1px solid #dadada;width:135px">
+        <img src="../../img/met/thumbnails/jacket_bts_winter.jpg" title="Jacket BTS" alt="Jacket BTS" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#797979;font-size:15px;line-height:1.2">Jacket BTS</p>
+        <p class="sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0002-S</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada;text-align:right;color:#797979;font-size:15px;font-weight:bold">
+        
+        <span class="price">$245.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;border-top:1px solid #dadada;width:135px">
+        <img src="../../img/met/thumbnails/t-shirt_real_madrid.jpg" title="T-shirt Real Madrid" alt="T-shirt Real Madrid" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#797979;font-size:15px;line-height:1.2">T-shirt Real Madrid</p>
+        <p class="sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0003-S</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada;text-align:right;color:#797979;font-size:15px;font-weight:bold">
+        
+        <span class="price">$64.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;border-top:1px solid #dadada;width:135px">
+        <img src="../../img/met/thumbnails/ultra_beyond-the-run.jpg" title="Ultra Beyond the Run" alt="Ultra Beyond the Run" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#797979;font-size:15px;line-height:1.2">Ultra Beyond the Run</p>
+        <p class="sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0004-M</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #dadada;text-align:right;color:#797979;font-size:15px;font-weight:bold">
+        
+        <span class="price">$119.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tfoot class="order-totals" style="border-top:1px solid #dadada;color:#797979;font-size:14px;line-height:1.1">
+<tr class="subtotal">
+<th colspan="2" scope="row" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-align:right;vertical-align:top;padding:9px;padding-top:20px;font-weight:400;background-color:#ededed;border-top:0px">
+                        Subtotal                    </th>
+        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;padding-right:20px;padding-top:20px;text-align:right;background-color:#ededed;border-top:0px">
+                        <span class="price" style="white-space:nowrap">$470.80</span>                    </td>
+    </tr>
+<tr class="shipping">
+<th colspan="2" scope="row" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-align:right;vertical-align:top;padding:9px;font-weight:400;background-color:#ededed;border-top:0px">
+                        Shipping &amp; Handling                    </th>
+        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;padding-right:20px;text-align:right;background-color:#ededed;border-top:0px">
+                        <span class="price" style="white-space:nowrap">$10.00</span>                    </td>
+    </tr>
+<tr class="grand_total">
+<th colspan="2" scope="row" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-align:right;vertical-align:top;padding:9px;font-size:18px;padding-bottom:20px;font-weight:400;background-color:#ededed;border-top:0px">
+                        <strong style="font-weight:700">Grand Total</strong>
+                    </th>
+        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;padding:9px;padding-right:20px;font-size:18px;padding-bottom:20px;text-align:right;background-color:#ededed;border-top:0px">
+                        <strong style="font-weight:700"><span class="price" style="white-space:nowrap">$480.80</span></strong>
+                    </td>
+    </tr>
+</tfoot>
+</table>
+<table class="order-details" style="border-collapse:collapse;width:100%">
+<tbody><tr>
+<td class="address-details" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#797979">Billing Info</h3>
+                        <p style="margin-top:0;margin-bottom:9px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#38c994;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                    <td class="address-details" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#797979">Shipping Info</h3>
+                        <p style="margin-top:0;margin-bottom:9px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#38c994;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                </tr>
+<tr>
+<td class="method-info" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#797979">Payment Method</h3>
+                        <dl class="payment-method checkmemo" style="margin-bottom:9px;margin-top:0">
+<dt class="title" style="font-weight:400;margin-bottom:4.5px;margin-top:0">Check / Money order</dt>
+                        </dl>
+</td>
+                    
+                    <td class="method-info" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#797979">Shipping Method</h3>
+                        <p style="margin-top:0;margin-bottom:9px">Flat Rate - Fixed</p>
+                        
+                    </td>
+                    
+                </tr>
+</tbody></table>
+</td>
+    </tr>
+</tbody></table>
+                                                                                        <!--  Here Goes Content: End  -->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="58" class="mobile-hide spacer" bgcolor="#EDEDED" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;min-width: 10px;width: 1%;"></td>
+                </tr>
+                <tr>
+                    <td class="footer" colspan="3" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                            <tbody>
+                                <tr>
+                                    <td class="text-padding-left text-padding-right" height="115" align="center" bgcolor="#EDEDED" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-left: 58px;padding-right: 58px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="wrapper" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" class="footer-links" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;font-size: 10px;line-height: 18px;font-weight: 600;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;color: #797979;letter-spacing: 1px;padding-top: 31px;text-transform: uppercase;">
+                                                        <a href="https://themes.email/magento.html" class="original-only" style="text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #797979;">Magento</a> <span class="original-only">•</span>
+                                                        <a href="https://themes.email/prestashop.html" class="original-only" style="text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #797979;">Prestashop</a> <span class="original-only">•</span>
+                                                        <a href="https://themes.email/woocommerce.html" class="original-only" style="text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #797979;">Woocommerce</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" class="footer-copy" valign="middle" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #797979;padding: 6px 0 10px 0;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;">
+                                                        <span class="appleFooter">Themes Email Inc., 725 First Avenue, Sunnyvale, CA 94089 USA</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="footer-logo" align="center" valign="middle" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;padding-bottom: 56px;">
+                                                        <a href="https://themes.email/" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #797979;">
+                                                            <img src="https://s3.amazonaws.com/templates.themes.email/zyz/icon2x.png" width="19" height="15" alt="icon" style="-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;padding: 11px 0 45px 0;" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-127309916-1', 'auto'); ga('send', 'pageview');
+        </script>
+    </body>
+</html>

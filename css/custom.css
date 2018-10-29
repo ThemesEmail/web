@@ -1,0 +1,29 @@
+/*! Place your custom styles here */
+
+.btn-mg-primary,
+.btn-mg-primary:visited {
+  background: #f26322;
+  border-color: #f26322;
+}
+.btn-mg-primary:hover,
+.btn-mg-primary:active{
+  background: #f58552;
+}
+.btn-wc-primary,
+.btn-wc-primary:visited {
+  background: #96588a;
+  border-color: #96588a;
+}
+.btn-wc-primary:hover,
+.btn-wc-primary:active{
+  background: #a47399;
+}
+.btn-ps-primary,
+.btn-ps-primary:visited {
+  background: #ff0076;
+  border-color: #ff0076;
+}
+.btn-ps-primary:hover,
+.btn-ps-primary:active{
+  background: #e30069;
+}

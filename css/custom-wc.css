@@ -1,0 +1,33 @@
+/*! Place your custom styles here */
+
+/**! --- WooCommerce --- **/
+a {
+  color: #96588a;
+}
+a:hover,
+a:active{
+  color: #a47399;
+}
+.color--primary {
+  color: #96588a !important;
+}
+.bg--primary {
+  background: #96588a;
+}
+.btn--primary,
+.btn--primary:visited {
+  background: #96588a;
+  border-color: #96588a;
+}
+.btn--primary:hover {
+  background: #a47399;
+}
+.btn--primary:active {
+  background: #a47399;
+}
+.process-3 li .process__number{
+  border: 2px solid #71b02f;
+}
+.process-3 li .process__number span{
+    color: #71b02f;
+}

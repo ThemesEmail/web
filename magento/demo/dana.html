@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dana - Magento Email Template</title>
+        <meta name="description" content="Email Template for Magento." />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--[if gte mso 15]>
+<style type="text/css">
+.evergreenspace {line-height:18.5px !important;}
+</style>
+<![endif]-->
+
+        <style type="text/css">
+            .gray9dlink a{color:#9d9d9d !important;}      
+            #outlook a {padding:0;}
+            body{ width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+            .ExternalClass {width:100%;}
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+            #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+            .whitelink a{color: #ffffff !important;}
+            .blacklink a{color: #000001 !important;}
+            .gray3link a{color: #333333 !important;}
+            .gray6link a{color: #666666 !important;}
+            div.preheader { display: none !important; }
+            table td {border-collapse: collapse;}
+
+            @media only screen and (max-width: 480px) {
+                table[id="backgroundTable"] { padding:20px 0 !important; }
+                table[class="wrapper"] { width:318px !important; }
+                *[class~="wrapper-140"] { width:140px !important; }
+                *[class~="wrapper-139"] { width:139px !important; }
+                *[class~="max-278"] { max-width:278px !important; }
+                *[class~="border-bottom-e6e6e6"] { border-bottom:solid 1px #dddddd !important; }
+                *[class~="wrapper-270"] { width: 270px !important;}
+                table[class="paddingreset"], td[class="paddingreset"] { padding: 0 !important; }
+                table[class="mobile-hidden"], td[class="mobile-hidden"], br[class="mobile-hidden"] { display: none !important; }
+                td[class~="block"] { width:318px !important; display:block !important; }
+                td[class="socialblock"] { width:318px !important; display:block !important; margin: 5px 0 5px 0 !important; padding: 0 !important;}
+                td[class~="align-center"] { text-align:center !important;}
+                td[class~="align-center-100"] { text-align:center !important; width: 100% !important;}
+                td[class~="align-center"] img { margin:0 auto !important;}
+                div[class~="show"] {display: block !important; margin:0 !important; overflow: visible !important; visibility: visible !important; width: auto !important; max-height:inherit !important;}
+                img[class="photo"],img[width="548"] {width:100% !important; height:auto !important; }
+                img[class="mobilespace"] {width:100% !important; height:20px !important; }
+                td[class="evergreenScale"] img { width:159px !important; height: 88px; }
+                td[class="copyContainer"] { text-align:center !important; width:318px !important; padding:5px 0 5px 0 !important; float:left; }
+                td[class="rightsContainer"] { text-align:center !important; width:318px !important; padding:5px 0 10px 0 !important; float:left;}
+                td[class="copyContainer"] a, td[class="copyContainer"] span {}
+                td[id="footcopy"] { display: block; text-align:center; padding: 0 0 10px 0 !important }
+                td[class="footTxt"] { padding:10px !important; text-align:center !important; display: block !important; max-width: 298px !important;}
+                td[class="footface"] {padding-right: 5px !important;}
+                td[class="socialspace"] {padding: 0 5px !important;}
+                *[class~="img-width-318"] {width: 318px !important; height: 1px !important;}
+                *[class~="img-width-278"] {width: 278px !important; height: 1px !important;}
+                *[class~="bgcolor-333333"] {background-color:#333333;}
+                *[class~="space-height-20"] {height: 20px !important;}
+                *[class~="pad-top-0"] {padding-top: 0px !important;}
+                *[class~="pad-bottom-10"] {padding-bottom: 10px !important;}
+                h1 { font-size: 28px; line-height: 1.2;}
+                h2 {font-size: 26px; line-height: 1.2;}
+                h3 {font-size: 24px; line-height: 1.1;}
+                h4 {font-size: 22px; line-height: 1.1;}
+                h5 {font-size: 18px; line-height: 1.1;}
+                h6 {font-size: 16px; line-height: 1.1;}
+                p {font-size: 12px; line-height: 1.4;}
+
+
+                div[class~="mobile-scale"] {
+                    transform-origin: 0 0;
+                    transform: scale(.58,.58);
+                    ms-transform-origin: 0 0;
+                    ms-transform: scale(.58,.58);
+                    moz-transform-origin: 0 0;
+                    moz-transform: scale(.58,.58);
+                    -webkit-transform-origin: 0 0;
+                    -webkit-transform: scale(.58,.58);
+                    max-width: 318px !important;
+                }
+                table[class="mobile-hidden-tablet"], td[class="mobile-hidden-tablet"], span[class="mobile-hidden-tablet"], br[class="mobile-hidden-tablet"], img[class="mobile-hidden-tablet"] { display:none; }
+                div[class~="showtablet"] {display: block !important; margin:0 !important; padding:0 !important; overflow: visible !important; visibility: visible !important; width: auto !important; max-height:inherit !important;}
+            }
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+                table[class="mobile-hidden-tablet"], td[class="mobile-hidden-tablet"], span[class="mobile-hidden-tablet"], br[class="mobile-hidden-tablet"], img[class="mobile-hidden-tablet"] { display:none; }
+                div[class~="showtablet"] {display: block !important; margin:0 !important; padding:0 !important; overflow: visible !important; visibility: visible !important; width: auto !important; max-height:inherit !important;}
+            }
+            
+                        @media all and (max-width: 480px) {
+            
+                .email-items { text-align: center;}
+                .email-items tbody td { display: block; width: 100% !important;}
+                .item-thumbnail img { margin: 0 auto; width: 300px;}
+                .item-info {border-top: 0px !important; text-align: center;}
+                .item-price {border-top: 0px !important; text-align: center !important;}
+                
+                .email-items tfoot th { display: block; width: auto !important; text-align: center !important; padding: 9px !important; padding-bottom: 0px !important;}
+                .email-items tfoot td { display: block; width: auto !important; text-align: center !important; padding: 9px !important;}
+                
+            }
+            
+        </style>
+    </head>
+    <body style="overflow-x: hidden">
+        <table cellpadding="0" cellspacing="0" border="0" class="pad-bottom-10 pad-top-0" style="padding: 20px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" align="center">
+            <tr>
+                <td>
+                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="548" style="border-bottom:solid 1px #dddddd; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="wrapper">
+                        <!-- Begin preheader -->
+                        <tr>
+                            <td align="left" valign="top" style="padding: 10px 0;">
+                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="548" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="wrapper">
+                                    <tr>
+                                        <td align="left" valign="top" style="text-decoration:none; color: #999999; font-family: Helvetica, Arial, sans-serif; font-size:10px; line-height:14px; mso-line-height-rule: exactly;">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing
+                                            <br />
+                                            elit sed do eiusmod tempor incididunt ut labore.
+                                        </td>
+                                        <td align="right" valign="middle" style="text-decoration:none; color: #999999; font-family: Helvetica, Arial, sans-serif; font-size:10px; line-height:14px; mso-line-height-rule: exactly;">
+                                            <a href="http://themes.email/"  target="_blank" style="text-decoration:underline; color: #999999; font-family: Helvetica, Arial, sans-serif; font-size:10px; line-height:14px; mso-line-height-rule: exactly;">Visit Website</a>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-right:solid 1px #dddddd; border-left: solid 1px #dddddd;">
+                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+
+                                    <!-- Begin logo -->
+                                    <tr>
+
+                                        <td align="center" valign="top" style="border-top:solid 1px #dddddd; border-bottom:solid 1px #dddddd;">
+                                            <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding: 25px 0;"><a href="https://themes.email/"  target="_blank"><img alt="" src="https://s3.amazonaws.com/templates.themes.email/dana/logo.png" border="0" width="58" height="20" style="display: block; outline:none; text-decoration:none; border:none; color: #333333; font-weight: bold; font-family: Helvetica, Arial, sans-serif; font-size:10px;"></a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Begin nav_new -->
+                                    <tr>
+
+                                        <td valign="top" class="mobile-hidden" style="border-bottom:solid 1px #dddddd;">
+                                            <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                <tr>
+                                                    <td align="center" style="padding: 15px 0px;">
+                                                        <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                            <tr>
+                                                                <td align="center" valign="middle" class="blacklink"><a class="blacklink" href="https://themes.email/magento.html"  target="_blank" style="text-decoration:none; color: #000001; font-weight: Bold; font-size:10px; font-family: Helvetica, Arial, sans-serif;">MAGENTO</a></td>
+
+                                                                <td align="center" valign="middle" class="blacklink" style="padding: 0 0 0 48px;"><a class="blacklink" href="https://themes.email/prestashop.html"  target="_blank" style="text-decoration:none; color: #000001; font-weight: Bold; font-size:10px; font-family: Helvetica, Arial, sans-serif;">PRESTASHOP</a></td>
+
+                                                                <td align="center" valign="middle" class="blacklink" style="padding: 0 0 0 48px;"><a class="blacklink" href="https://themes.email/woocommerce.html"  target="_blank" style="text-decoration:none; color: #000001; font-weight: Bold; font-size:10px; font-family: Helvetica, Arial, sans-serif;">WOOCOMMERCE</a></td>
+
+                                                                <td align="center" valign="middle" class="blacklink" style="padding: 0 0 0 48px;"><a class="blacklink" href="https://themes.email/"  target="_blank" style="text-decoration:none; color: #000001; font-weight: Bold; font-size:10px; font-family: Helvetica, Arial, sans-serif;">WORDPRESS</a></td>
+
+                                                                <td align="center" valign="middle" class="blacklink" style="padding: 0 0 0 48px;"><a class="blacklink" href="https://themes.email/"  target="_blank" style="text-decoration:none; color: #000001; font-weight: Bold; font-size:10px; font-family: Helvetica, Arial, sans-serif;">EDD</a></td>
+
+
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Begin custom -->
+                                    <tr>
+
+                                        <td align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                            <tr>
+                                                <td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="border-collapse:collapse;">
+                                                    <tr>
+                                                        <td align="left" valign="top" style="font-size:0%; line-height:100%;"><img alt="" src="https://s3.amazonaws.com/templates.themes.email/dana/spacer.gif" width="1" height="20" style="display: block; outline:none; text-decoration:none; border:none;" class="space-height-20"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td id="emailcontent" align="left" valign="top" style="outline: none; text-decoration: none; border: none; color: #9d9d9d; font: 12px Helvetica, Arial, Sans-Serif; line-height:20px; padding:10px 20px 10px 20px;" class="gray9dlink">
+
+                                                            <!--  Here Goes Content: Start  -->
+
+                                                            <table style="border-collapse:collapse;width:100%">
+<tbody><tr class="email-summary">
+<td style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;text-align:center;padding-top:20px;padding-bottom:10px">
+            <h1 style="font-weight:bold;line-height:1.1;font-size:23px;margin-top:0;margin-bottom:4px;border-bottom:0;padding-bottom:0;color:#333">
+<span>Thanks</span> for your order John</h1>
+            <h3 style="font-weight:300;line-height:1.1;font-size:16px;margin-top:17px;margin-bottom:8.5px">Order #<span class="no-link" style="font-weight:bold;color:#333">000000001</span>
+</h3>
+        </td>
+    </tr>
+<tr class="email-information">
+<td style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top">
+            <table class="email-items" style="border-collapse:collapse;width:100%;border-spacing:0;max-width:100%;margin-bottom:30px;border:0">
+<thead><tr>
+<th class="item-info" colspan="3" style="font-family:Helvetica,Arial,Sans-Serif;text-align:left;vertical-align:bottom;padding:8.5px;font-size:11px;font-weight:300;text-transform:uppercase;background-color:none">
+                Items            </th>
+        </tr></thead>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/freelift_gradient.jpg" title="Freelift Gradient" alt="Freelift Gradient" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.25px;font-weight:700;color:#333;font-size:15px;line-height:1.2">Freelift Gradient</p>
+        <p class="sku" style="margin-top:0;margin-bottom:8.5px;font-size:12px;line-height:1.3;margin:0">SKU: 0001-M</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7;text-align:right;color:#333;font-size:15px;font-weight:bold">
+        
+        <span class="price">$39.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/jacket_bts_winter.jpg" title="Jacket BTS" alt="Jacket BTS" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.25px;font-weight:700;color:#333;font-size:15px;line-height:1.2">Jacket BTS</p>
+        <p class="sku" style="margin-top:0;margin-bottom:8.5px;font-size:12px;line-height:1.3;margin:0">SKU: 0002-S</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7;text-align:right;color:#333;font-size:15px;font-weight:bold">
+        
+        <span class="price">$245.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/t-shirt_real_madrid.jpg" title="T-shirt Real Madrid" alt="T-shirt Real Madrid" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.25px;font-weight:700;color:#333;font-size:15px;line-height:1.2">T-shirt Real Madrid</p>
+        <p class="sku" style="margin-top:0;margin-bottom:8.5px;font-size:12px;line-height:1.3;margin:0">SKU: 0003-S</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7;text-align:right;color:#333;font-size:15px;font-weight:bold">
+        
+        <span class="price">$64.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/ultra_beyond-the-run.jpg" title="Ultra Beyond the Run" alt="Ultra Beyond the Run" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info has-extra" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7">    
+        <p class="product-name" style="margin-top:0;margin-bottom:4.25px;font-weight:700;color:#333;font-size:15px;line-height:1.2">Ultra Beyond the Run</p>
+        <p class="sku" style="margin-top:0;margin-bottom:8.5px;font-size:12px;line-height:1.3;margin:0">SKU: 0004-M</p>
+                <dl class="item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:middle;padding:8.5px;border-top:1px solid #e3e3e7;text-align:right;color:#333;font-size:15px;font-weight:bold">
+        
+        <span class="price">$119.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tfoot class="order-totals" style="border-top:1px solid #e3e3e7;color:#333;font-size:14px;line-height:1.1">
+<tr class="subtotal">
+<th colspan="2" scope="row" style="font-family:Helvetica,Arial,Sans-Serif;text-align:right;vertical-align:top;padding:8.5px;padding-top:20px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        Subtotal                    </th>
+        <td style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;padding-right:20px;padding-top:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <span class="price" style="white-space:nowrap">$470.80</span>                    </td>
+    </tr>
+<tr class="shipping">
+<th colspan="2" scope="row" style="font-family:Helvetica,Arial,Sans-Serif;text-align:right;vertical-align:top;padding:8.5px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        Shipping &amp; Handling                    </th>
+        <td style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;padding-right:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <span class="price" style="white-space:nowrap">$10.00</span>                    </td>
+    </tr>
+<tr class="grand_total">
+<th colspan="2" scope="row" style="font-family:Helvetica,Arial,Sans-Serif;text-align:right;vertical-align:top;padding:8.5px;font-size:18px;padding-bottom:20px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        <strong style="font-weight:700">Grand Total</strong>
+                    </th>
+        <td style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;padding:8.5px;padding-right:20px;font-size:18px;padding-bottom:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <strong style="font-weight:700"><span class="price" style="white-space:nowrap">$480.80</span></strong>
+                    </td>
+    </tr>
+</tfoot>
+</table>
+<table class="order-details" style="border-collapse:collapse;width:100%">
+<tbody><tr>
+<td class="address-details" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;width:50%;line-height:1.3;padding:8.5px 8.5px 8.5px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:8.5px;color:#333">Billing Info</h3>
+                        <p style="margin-top:0;margin-bottom:8.5px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#000;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                    <td class="address-details" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;width:50%;line-height:1.3;padding:8.5px 8.5px 8.5px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:8.5px;color:#333">Shipping Info</h3>
+                        <p style="margin-top:0;margin-bottom:8.5px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#000;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                </tr>
+<tr>
+<td class="method-info" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;width:50%;line-height:1.3;padding:8.5px 8.5px 8.5px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:8.5px;color:#333">Payment Method</h3>
+                        <dl class="payment-method checkmemo" style="margin-bottom:8.5px;margin-top:0">
+<dt class="title" style="font-weight:400;margin-bottom:4.25px;margin-top:0">Check / Money order</dt>
+                        </dl>
+</td>
+                    
+                    <td class="method-info" style="font-family:Helvetica,Arial,Sans-Serif;vertical-align:top;width:50%;line-height:1.3;padding:8.5px 8.5px 8.5px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:8.5px;color:#333">Shipping Method</h3>
+                        <p style="margin-top:0;margin-bottom:8.5px">Flat Rate - Fixed</p>
+                        
+                    </td>
+                    
+                </tr>
+</tbody></table>
+</td>
+    </tr>
+</tbody></table>
+
+                                                            <!--  Here Goes Content: End  -->
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left" valign="top" style="font-size:0%; line-height:100%;"><img alt="" src="https://s3.amazonaws.com/templates.themes.email/dana/spacer.gif" width="1" height="20" style="display: block; outline:none; text-decoration:none; border:none;" class="space-height-20"></td>
+                                                    </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- Begin footer -->
+                                    <tr>
+
+                                        <td align="center" valign="top">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                <tr>
+                                                    <td align="" valign="top" style="padding:15px 30px;" class="paddingreset" bgcolor="#444444">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                            <tr>
+                                                                <td align="" class="copyContainer">
+                                                                    <a href="#"  target="_blank" style="text-decoration:none; color:#ffffff; font-size:10px; font-family: Helvetica, Arial, sans-serif;" class="footfont">Support</a>
+                                                                    &nbsp;&nbsp;&nbsp;
+                                                                    <a href="#"  target="_blank" style="text-decoration:none; color:#ffffff; font-size:10px; font-family: Helvetica, Arial, sans-serif;" class="footfont">Documentation</a>
+                                                                    &nbsp;&nbsp;&nbsp;
+                                                                    <a href="#"  target="_blank" style="text-decoration:none; color:#ffffff; font-size:10px; font-family: Helvetica, Arial, sans-serif;" class="footfont">Help Center</a>
+                                                                </td>
+                                                                <td class="rightsContainer" align="right" style="text-decoration:none; color:#ffffff; font-size:10px; font-family: Helvetica, Arial, sans-serif;">&copy; 1234 THEMES.EMAIL, Inc. All Rights Reserved.</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="" valign="top" style="padding:20px 30px;" class="paddingreset">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                            <tr>
+                                                                <td align="" valign="top">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                                        <tr>
+                                                                            <td align="" valign="top" class="footTxt" style="color: #666666; font-family: Helvetica, Arial, sans-serif; font-size:10px;" >
+                                                                                THEMES.EMAIL, INC. 725 First Avenue, Sunnyvale, CA 94089 USA.
+                                                                                <br /><br />
+                                                                                Please do not reply to this email. If you need to contact THEMES.EMAIL<br>
+                                                                                please <a href="#"  target="_blank" style="text-decoration:underline; color:#666666; font-size:10px; font-family: Helvetica, Arial, sans-serif;">click here</a>.
+
+
+
+
+                                                                            </td>
+                                                                            <td align="right" valign="top" class="footTxt" style="color: #333333; font-family: Helvetica, Arial, sans-serif; font-size:10px; padding:20px 40px;">
+                                                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                                                    <tr>
+                                                                                        <td align="center" valign="top" style="text-decoration:none; color: #333333; font-weight:bold; font-family: Helvetica, Arial, sans-serif; font-size:10px;">
+                                                                                            keep in touch:
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" style="padding: 5px 0 0 0;">
+                                                                                            <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                                                                <tr>
+                                                                                                    <td valign="top" class="footface"><a href="#" target="_blank" ><img src="https://s3.amazonaws.com/templates.themes.email/dana/facebook.jpg" width="9" height="16" alt="Facebook" border="0" style="display:block; font:9px Arial, Helvetica, sans-serif; color:#666666;"></a></td>
+                                                                                                    <td valign="top" class="socialspace" style="padding: 0 9px;"><a href="#" target="_blank" ><img src="https://s3.amazonaws.com/templates.themes.email/dana/twitter.jpg" width="19" height="16" alt="Twitter" border="0" style="display:block; font:9px Arial, Helvetica, sans-serif; color:#666666;"></a></td>
+                                                                                                    <td valign="top" class="socialspace"><a href="#" target="_blank" ><img src="https://s3.amazonaws.com/templates.themes.email/dana/instagram.jpg" width="15" height="16" alt="Instagram" border="0" style="display:block; font:9px Arial, Helvetica, sans-serif; color:#666666;"></a></td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-127309916-1', 'auto'); ga('send', 'pageview');
+        </script>
+    </body>
+</html>

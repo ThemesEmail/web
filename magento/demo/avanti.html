@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Avanti - Magento Email Template</title>
+        <meta name="description" content="Email Template for Magento." />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            @media screen {
+                @font-face {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: local('Lato Regular'), local('Lato-Regular'), url(https://s3.amazonaws.com/templates.themes.email/avanti/lato-regular.woff) format('woff');
+                }
+
+                @font-face {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 700;
+                    src: local('Lato Bold'), local('Lato-Bold'), url(https://s3.amazonaws.com/templates.themes.email/avanti/lato-bold.woff) format('woff');
+                }
+
+                @font-face {
+                    font-family: 'Lato';
+                    font-style: italic;
+                    font-weight: 400;
+                    src: local('Lato Italic'), local('Lato-Italic'), url(https://s3.amazonaws.com/templates.themes.email/avanti/lato-italic.woff) format('woff');
+                }
+            }
+
+
+            body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+            table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+            img { -ms-interpolation-mode: bicubic; }
+
+            img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+            h1 { font-size: 28px; line-height: 1.2;}
+            h2 {font-size: 26px; line-height: 1.2;}
+            h3 {font-size: 24px; line-height: 1.1;}
+            h4 {font-size: 22px; line-height: 1.1;}
+            h5 {font-size: 18px; line-height: 1.1;}
+            h6 {font-size: 16px; line-height: 1.1;}
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            a {
+                color: #FF5B4F;
+                font-weight: bold;
+                text-decoration: none !important;
+            }
+            a:hover {
+                color: #000000 !important;
+                border-bottom: 3px solid #FF5B4F !important;
+                text-decoration: none !important;
+            }
+            div[style*="margin: 16px 0;"] { margin: 0 !important; }
+
+            @media all and (max-width: 480px) {
+
+                .email-items { text-align: center;}
+                .email-items tbody td { display: block; width: 100% !important;}
+                .item-thumbnail img { margin: 0 auto; width: 300px;}
+                .item-info {border-top: 0px !important; text-align: center;}
+                .item-price {border-top: 0px !important; text-align: center !important;}
+
+                .email-items tfoot th { display: block; width: auto !important; text-align: center !important; padding: 9px !important; padding-bottom: 0px !important;}
+                .email-items tfoot td { display: block; width: auto !important; text-align: center !important; padding: 9px !important;}
+
+            }
+
+        </style>
+    </head>
+
+    <body style="background-color:#ffffff;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;height:100% !important;width:100% !important; overflow-x: hidden;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;">
+
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding-top:0px;padding-bottom:0px;padding-right:20px;padding-left:20px;border-top-width:4px;border-top-style:solid;border-top-color:#FF5B4F;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                    <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellspacing="0" cellpadding="0" width="480" style="border-top-width:4px;border-top-style:solid;border-top-color:#FF5B4F;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;" >
+<tr>
+<td align="center" valign="top" width="480" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;" >
+<![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:480px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;">
+                        <tr>
+                            <td align="left" valign="top" style="padding-top:0px;padding-bottom:40px;padding-right:0px;padding-left:0px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                <a href="https://themes.email/" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;color:#FF5B4F;font-weight:bold;text-decoration:none !important;">
+                                    <img alt="" src="https://s3.amazonaws.com/templates.themes.email/avanti/logo.png" width="40" height="40" border="0" style="display:block;width:40px;max-width:40px;min-width:40px;min-height:40px;font-family:'Lato', sans-serif;color:#ffffff;font-size:13px;-ms-interpolation-mode:bicubic;border-width:0;height:auto;line-height:100%;outline-style:none;text-decoration:none;"
+                                         />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding-top:0px;padding-bottom:0px;padding-right:20px;padding-left:20px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                    <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellspacing="0" cellpadding="0" width="480" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;" >
+<tr>
+<td align="center" valign="top" width="480" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;" >
+<![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:480px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;">
+
+                        <tr>
+                            <td id="emailcontent" bgcolor="#ffffff" align="left" style="padding-top:20px;padding-bottom:40px;padding-right:0px;padding-left:0px;color:#666666;font-family:'Lato', sans-serif;font-size:13px;font-weight:400;line-height:25px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+
+                                <!--  Here Goes Content: Start  -->
+                                
+                                <table style="border-collapse:collapse;width:100%">
+<tbody><tr class="m_8602181095639850091email-summary">
+<td style="font-family:'Lato',sans-serif;vertical-align:top;text-align:center;padding-top:20px;padding-bottom:10px">
+            <h1 style="font-weight:bold;line-height:1.1;font-size:25px;margin-top:0;margin-bottom:4px;border-bottom:0;padding-bottom:0;color:#666">
+<span>Thanks</span> for your order John</h1>
+            <h3 style="font-weight:300;line-height:1.1;font-size:17px;margin-top:18px;margin-bottom:9px">Order #<span class="m_8602181095639850091no-link" style="font-weight:bold;color:#666">000000001</span>
+</h3>
+        </td>
+    </tr>
+<tr class="m_8602181095639850091email-information">
+<td style="font-family:'Lato',sans-serif;vertical-align:top">
+            <table class="email-items" style="border-collapse:collapse;width:100%;border-spacing:0;max-width:100%;margin-bottom:30px;border:0">
+<thead><tr>
+<th class="item-info" colspan="3" style="font-family:'Lato',sans-serif;text-align:left;vertical-align:bottom;padding:9px;font-size:11px;font-weight:300;text-transform:uppercase;background-color:none">
+                Items            </th>
+        </tr></thead>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/freelift_gradient.jpg" title="Freelift Gradient" alt="Freelift Gradient" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info m_8602181095639850091has-extra" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7">    
+        <p class="m_8602181095639850091product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#666;font-size:15px;line-height:1.2">Freelift Gradient</p>
+        <p class="m_8602181095639850091sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0001-M</p>
+                <dl class="m_8602181095639850091item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="m_8602181095639850091qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7;text-align:right;color:#666;font-size:15px;font-weight:bold">
+        
+        <span class="m_8602181095639850091price">$39.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/jacket_bts_winter.jpg" title="Jacket BTS" alt="Jacket BTS" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info m_8602181095639850091has-extra" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7">    
+        <p class="m_8602181095639850091product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#666;font-size:15px;line-height:1.2">Jacket BTS</p>
+        <p class="m_8602181095639850091sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0002-S</p>
+                <dl class="m_8602181095639850091item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="m_8602181095639850091qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7;text-align:right;color:#666;font-size:15px;font-weight:bold">
+        
+        <span class="m_8602181095639850091price">$245.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/t-shirt_real_madrid.jpg" title="T-shirt Real Madrid" alt="T-shirt Real Madrid" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info m_8602181095639850091has-extra" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7">    
+        <p class="m_8602181095639850091product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#666;font-size:15px;line-height:1.2">T-shirt Real Madrid</p>
+        <p class="m_8602181095639850091sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0003-S</p>
+                <dl class="m_8602181095639850091item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                S            </dd>
+                    </dl>
+<p class="m_8602181095639850091qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7;text-align:right;color:#666;font-size:15px;font-weight:bold">
+        
+        <span class="m_8602181095639850091price">$64.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tbody><tr>
+<td class="item-thumbnail" style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;border-top:1px solid #e3e3e7;width:135px">
+        <img src="../../img/met/thumbnails/ultra_beyond-the-run.jpg" title="Ultra Beyond the Run" alt="Ultra Beyond the Run" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;vertical-align:top">
+</td>
+    <td class="item-info m_8602181095639850091has-extra" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7">    
+        <p class="m_8602181095639850091product-name" style="margin-top:0;margin-bottom:4.5px;font-weight:700;color:#666;font-size:15px;line-height:1.2">Ultra Beyond the Run</p>
+        <p class="m_8602181095639850091sku" style="margin-top:0;margin-bottom:9px;font-size:12px;line-height:1.3;margin:0">SKU: 0004-M</p>
+                <dl class="m_8602181095639850091item-options" style="margin-bottom:0;margin-top:0;padding-left:0px;font-size:12px;line-height:1.3;margin:0">
+<dt style="font-weight:700;margin-bottom:0;margin-top:0;padding-bottom:0;text-align:left;display:inline"><strong style="font-weight:normal"><em style="font-style:normal">SIZE:</em></strong></dt>
+            <dd style="margin-bottom:0;margin-top:0;margin-left:0;padding-bottom:0;padding-left:0px;text-align:left;display:inline">
+                M            </dd>
+                    </dl>
+<p class="m_8602181095639850091qty" style="margin-top:0;margin-bottom:0;font-size:12px;line-height:1.3;margin:0">QTY: 1</p>
+
+                                            </td>
+    <td class="item-price" style="font-family:'Lato',sans-serif;vertical-align:middle;padding:9px;border-top:1px solid #e3e3e7;text-align:right;color:#666;font-size:15px;font-weight:bold">
+        
+        <span class="m_8602181095639850091price">$119.95</span>
+    
+
+    </td>
+</tr></tbody>
+<tfoot class="m_8602181095639850091order-totals" style="border-top:1px solid #e3e3e7;color:#666;font-size:14px;line-height:1.1">
+<tr class="m_8602181095639850091subtotal">
+<th colspan="2" scope="row" style="font-family:'Lato',sans-serif;text-align:right;vertical-align:top;padding:9px;padding-top:20px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        Subtotal                    </th>
+        <td style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;padding-right:20px;padding-top:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <span class="m_8602181095639850091price" style="white-space:nowrap">$470.80</span>                    </td>
+    </tr>
+<tr class="m_8602181095639850091shipping">
+<th colspan="2" scope="row" style="font-family:'Lato',sans-serif;text-align:right;vertical-align:top;padding:9px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        Shipping &amp; Handling                    </th>
+        <td style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;padding-right:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <span class="m_8602181095639850091price" style="white-space:nowrap">$10.00</span>                    </td>
+    </tr>
+<tr class="m_8602181095639850091grand_total">
+<th colspan="2" scope="row" style="font-family:'Lato',sans-serif;text-align:right;vertical-align:top;padding:9px;font-size:18px;padding-bottom:20px;font-weight:400;background-color:#fafafa;border-top:0px">
+                        <strong style="font-weight:700">Grand Total</strong>
+                    </th>
+        <td style="font-family:'Lato',sans-serif;vertical-align:top;padding:9px;padding-right:20px;font-size:18px;padding-bottom:20px;text-align:right;background-color:#fafafa;border-top:0px">
+                        <strong style="font-weight:700"><span class="m_8602181095639850091price" style="white-space:nowrap">$480.80</span></strong>
+                    </td>
+    </tr>
+</tfoot>
+</table>
+<table class="m_8602181095639850091order-details" style="border-collapse:collapse;width:100%">
+<tbody><tr>
+<td class="m_8602181095639850091address-details" style="font-family:'Lato',sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#666">Billing Info</h3>
+                        <p style="margin-top:0;margin-bottom:9px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#ff5b4f;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                    <td class="m_8602181095639850091address-details" style="font-family:'Lato',sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#666">Shipping Info</h3>
+                        <p style="margin-top:0;margin-bottom:9px">John Doe<br>
+
+725 First Avenue<br>
+
+
+
+Sunnyvale,  California, 94089<br>
+United States<br>
+T: <a href="tel:%20(261)%20395-2925" style="color:#ff5b4f;text-decoration:underline" target="_blank"> (261) 395-2925</a>
+
+</p>
+                    </td>
+                    
+                </tr>
+<tr>
+<td class="m_8602181095639850091method-info" style="font-family:'Lato',sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#666">Payment Method</h3>
+                        <dl class="m_8602181095639850091payment-method m_8602181095639850091checkmemo" style="margin-bottom:9px;margin-top:0">
+<dt class="m_8602181095639850091title" style="font-weight:400;margin-bottom:4.5px;margin-top:0">Check / Money order</dt>
+                        </dl>
+</td>
+                    
+                    <td class="m_8602181095639850091method-info" style="font-family:'Lato',sans-serif;vertical-align:top;width:50%;line-height:1.3;padding:9px 9px 9px 0">
+                        <h3 style="font-weight:bold;line-height:1.1;font-size:14px;margin-top:0;margin-bottom:9px;color:#666">Shipping Method</h3>
+                        <p style="margin-top:0;margin-bottom:9px">Flat Rate - Fixed</p>
+                        
+                    </td>
+                    
+                </tr>
+</tbody></table>
+</td>
+    </tr>
+</tbody></table>
+
+                                <!--  Here Goes Content: End  -->
+
+                            </td>
+                        </tr>
+
+
+                    </table>
+                    <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding-top:0px;padding-bottom:0px;padding-right:20px;padding-left:20px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                    <!--[if (gte mso 9)|(IE)]>
+<table align="center" border="0" cellspacing="0" cellpadding="0" width="480" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;" >
+<tr>
+<td align="center" valign="top" width="480" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;" >
+<![endif]-->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:480px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;">
+                        <tr>
+                            <td bgcolor="#ffffff" align="left" style="padding-top:0px;padding-bottom:10px;padding-right:0px;padding-left:0px;color:#aaaaaa;font-family:'Lato', sans-serif;font-size:14px;font-weight:400;line-height:18px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                <p style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-left:10px;"><a href="https://themes.email/" target="_blank" style="color:#FF5B4F;font-weight:bold;text-decoration:none !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">Themes Email Inc.</a></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td bgcolor="#ffffff" align="left" style="padding-top:0px;padding-bottom:30px;padding-right:0px;padding-left:0px;color:#aaaaaa;font-family:'Lato', sans-serif;font-size:14px;font-weight:400;line-height:18px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                <p style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-left:10px;">725 First Avenue, Sunnyvale, CA 94089</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                </td>
+            </tr>
+        </table>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-127309916-1', 'auto'); ga('send', 'pageview');
+        </script>
+    </body>
+
+</html>

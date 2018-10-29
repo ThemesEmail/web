@@ -1,0 +1,95 @@
+<h1>How do I install email templates?</h1>
+           <div class="bean-panel-body">
+            <h4>For Magento 1.9.x.x</h4>
+            <span class="highlight">Before you make any changes, it is important to backup your data.<br></span>
+            <ol>
+                <li>Unzip the file.</li>
+                <li>Open the folder “magento1”.</li>            
+                <li>Copy “email” folder to
+                    <pre>app/locale/[langCode]/template/</pre></li>
+                <li>Copy “email-inline.css” file to
+                    <pre>skin/frontend/[YOURPACKAGE]/[YOURTHEME]/css/email-inline.css</pre></li>
+                <li>Copy “email-non-inline.css” file to
+                    <pre>skin/frontend/[YOURPACKAGE]/[YOURTHEME]/css/email-non-inline.css</pre></li>
+                <li>Make sure to flush all caches: <span class="bold">System &gt; Cache Management </span></li>
+            </ol> 
+
+            <span class="highlight"><span class="bold">TIP:</span> Use your language Code: “en_US” is for English (United States), “de_DE” for German (Germany) etc.</span>
+</div>
+
+<h1>How do I customize the email templates?</h1>
+<div class="bean-panel-body">
+            <h4 style="text-decoration:underline">Customize email templates in the filesystem</h4>
+            <br>
+            
+            <h5>Customize header and footer templates</h5>
+            Every frontend email template includes a header and footer template using these two directives: 
+            <br>
+            <span class="bold">{{template config_path="design/email/header"}}</span><br>
+            <span class="bold">{{template config_path="design/email/footer"}}</span><br>
+            By default, those two directives load contents from these files:
+            <pre>app/locale/[langCode]/template/email/html/header.html<br>app/locale/[langCode]/template/email/html/footer.html</pre>
+            <br>
+            You can customize header and footer templates using your favorite IDE or text editor.
+            <br><br>
+            <h5>You can add a logo to emails by uploading it in the Magento Admin</h5>
+            <ul>
+                <li>Navigate to <span class="bold">SYSTEM &gt; Configuration &gt; General &gt; Design &gt; Transactional Emails &gt; Logo Image</span></li>
+                <li>Upload your logo</li>
+                <li>Enter values for <span class="bold">Logo Width</span> and <span class="bold">Logo Height</span></li>
+                <li>Click the <span class="bold">Save Config</span> button</li>
+            </ul>
+            <h5>Inline &amp; Non-inline styles</h5>
+            Inline &amp; Non-inline styles come from the file
+            <pre>skin/frontend/[YOURPACKAGE]/[YOURTHEME]/css/email-inline.css<br>skin/frontend/[YOURPACKAGE]/[YOURTHEME]/css/email-non-inline.css</pre>
+
+            <div class="bean-alert success">
+            <div class="bean-alert success">
+                In the case if you do not use functions in the admin area of magento to customize  email templates, you do not need attach emails in the system. Magento will use the new email templates as default email templates. This method is recommended.
+            </div>
+            <h5>Localizing Transactional Emails</h5>
+            To use email templates for other language than en_US, you have to replace files in english language with standard translated files (Language Pack) in the folder:           
+            <pre>app/locale/[langCode]/template/email/ </pre>
+            <span class="bold">TIP:</span> Except the html folder.
+            <br><br>
+ 
+            
+            <h4 style="text-decoration:underline">Customize email templates using the Magento Admin</h4>
+            To customize a default Magento email template, simply navigate to the <span class="bold">Transactional Emails</span> page in your Magento backend via the path <span class="bold">SYSTEM &gt; TRANSACTIONAL EMAILS</span>, then follow these 3 easy steps:
+            <br> <br>
+            <ol>
+                <li>1. click <span class="bold">ADD NEW TEMPLATE</span> to create a new custom email template</li>
+                <li>2. select the default transactional email template that you wish to customize from the <span class="bold">TEMPLATE DROP-DOWN</span> </li>
+                <li>3. select your <span class="bold">LANGUAGE</span> from language drop-down </li>
+                <li>4. click <span class="bold">LOAD TEMPLATE</span></li>
+                <li>5. you will see that the HTML code for that email now appears in the <span class="bold">TEMPLATE CONTENT</span> section below</li>
+                <br>
+                <li><img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/edit-email.jpg"></li>
+                <br>
+                <li>6. now you can <span class="bold">EDIT HTML</span> code of the email template</li>
+                <li>7. after editing you can <span class="bold">SAVE the edited TEMPLATE</span> with a custom name</li>
+                <img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/email-list.jpg">
+            </ol>
+
+
+            <div class="bean-alert success">
+                Now that you have created your custom transactional emails in Magento, it is time to configure your system configuration panel. This will tell Magento to send your new custom email templates (instead of the default templates) when that particular action is triggered on your site.
+            </div>
+            <h5>Configure the New Order Email</h5>
+            To configure the newly customer New Order email, Navigate to the <span class="bold">SYSTEM &gt; CONFIGURATION</span> panel, select <span class="bold">SALES EMAILS</span> from the sales tab. Click on the <span class="bold">ORDER</span> row and select your custom template from the <span class="bold">NEW ORDER EMAIL TEMPLATE</span> dropdown:<br>
+            <img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/Configure-Order-Email.png" >
+            <br><br>
+            <h5>Configure the New Shipment Email</h5>
+            To configure the newly customer New Shipment email, simply navigate to the <span class="bold">SYSTEM &gt; CONFIGURATION</span> panel, and select <span class="bold">SALES EMAILS</span> from the sales tab. Here you will click on the <span class="bold">SHIPMENTS</span> row and select your custom template from the <span class="bold">SHIPMENT EMAIL TEMPLATES</span> dropdown:<br>
+            <img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/Configure-New-Shipment.png" >
+            <br><br>
+            <h5>Configure the Forgotten Password Email</h5>
+            To configure the Forgot Password email, simply navigate to the <span class="bold">SYSTEM &gt; CONFIGURATION</span> panel, and select <span class="bold">CUSTOMER CONFIGURATION</span> from the customers tab. Here you will click on the <span class="bold">PASSWORD OPTIONS</span> row and select your custom template from the <span class="bold">FORGOT PASSWORD TEMPLATES</span> dropdown:<br>
+            <img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/Configure-Forgot-Password-Email.png" >
+            <br><br>
+            <h5>Configure the New Account Email</h5>
+            To configure the New Account email, simply navigate to the <span class="bold">SYSTEM &gt; CONFIGURATION</span> panel, and select <span class="bold">CUSTOMER CONFIGURATION</span> from the customers tab. Here you will click on the <span class="bold">PASSWORD OPTIONS</span> row and select your custom template from the <span class="bold">FORGOT PASSWORD TEMPLATE</span> dropdown:<br>
+            <img src="https://s3.amazonaws.com/themes.email/other-images/documentation/magento1/Configure-New-Account-Email.png" >
+            
+
+        </div>

@@ -1,0 +1,33 @@
+/*! Place your custom styles here */
+
+/**! --- PrestaShop --- **/
+a {
+  color: #ff0076;
+}
+a:hover,
+a:active{
+  color: #e30069;
+}
+.color--primary {
+  color: #ff0076 !important;
+}
+.bg--primary {
+  background: #ff0076;
+}
+.btn--primary,
+.btn--primary:visited {
+  background: #ff0076;
+  border-color: #ff0076;
+}
+.btn--primary:hover {
+  background: #e30069;
+}
+.btn--primary:active {
+  background: #e30069;
+}
+.process-3 li .process__number{
+  border: 2px solid #34219e;
+}
+.process-3 li .process__number span{
+    color: #34219e;
+}

@@ -1,0 +1,33 @@
+/*! Place your custom styles here */
+
+/**! --- Magento --- **/
+a {
+  color: #f26322;
+}
+a:hover,
+a:active{
+  color: #f58552;
+}
+.color--primary {
+  color: #f26322 !important;
+}
+.bg--primary {
+  background: #f26322;
+}
+.btn--primary,
+.btn--primary:visited {
+  background: #f26322;
+  border-color: #f26322;
+}
+.btn--primary:hover {
+  background: #f58552;
+}
+.btn--primary:active {
+  background: #f58552;
+}
+.process-3 li .process__number{
+  border: 2px solid #2cacb3;
+}
+.process-3 li .process__number span{
+    color: #2cacb3;
+}

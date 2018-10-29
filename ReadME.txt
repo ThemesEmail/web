@@ -11,3 +11,5 @@ templates: 11.oktobra 2018 - som zamenil URL na templates.themes.email z themes.
 - od WET 2.1 nové
 - od PET 2019 nové
 - EET staré - nebude to funkèné
+
+/ 2019

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Product Links in WooCommerce Order Emails</title>
+        <meta name="description" content="Step-by-step Tutorial" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../img/icons/favicon-16x16.png">
+        <link rel="shortcut icon" href="../img/icons/favicon.ico">
+        <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/custom-wc.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+
+    </head>
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container">
+            <div class="via-1538504852235" via="via-1538504852235" vio="html2">
+                <div class="bar bar--sm visible-xs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 col-md-2">
+                                <a href="../woocommerce.html"> <img class="logo logo-dark" alt="logo" src="../img/logo.png"> </a>
+                            </div>
+                            <div class="col-9 col-md-10 text-right">
+                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="menu1" class="bar bar-1 hidden-xs" data-scroll-class="10px:pos-fixed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-2 hidden-xs">
+                                <div class="bar__module">
+                                    <a href="../woocommerce.html"> <img class="logo logo-dark" alt="logo" src="../img/logo.png"> </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                                <div class="bar__module">
+                                    <ul class="menu-horizontal text-left">
+                                        <li> <a href="../woocommerce.html#about" class="inner-link" target="_self">About<br></a> </li>
+                                        <li> <a href="../woocommerce.html#portfolio" class="inner-link" target="_self">
+                                            Portfolio<br></a> </li>
+                                        <li> <a href="../woocommerce.html#documentation" class="inner-link" target="_self">Documentation<br></a> </li>
+                                        <li> <a href="../woocommerce.html#faq" class="inner-link" target="_self">
+                                            Faq<br></a> </li>
+                                        <li> <a href="../woocommerce.html#reviews" class="inner-link" target="_self">
+                                            Reviews<br></a> </li>
+                                        <li> <a href="../woocommerce.html#tutorials" class="inner-link" target="_self">
+                                            Tutorials<br></a> </li>
+                                    </ul>
+                                </div>
+                                <div class="bar__module">
+                                    <a class="btn btn--sm type--uppercase" href="https://themesemail.freshdesk.com/"> <span class="btn__text">
+                                        Help Desk<br></span> </a>
+                                    <a class="btn btn--sm btn--primary type--uppercase" href="https://codecanyon.net/item/woocommerce-email-templates/19426171"> <span class="btn__text">
+                                        Buy Now
+                                        </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="main-container">
+            <section class="space--sm">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-8">
+                            <article>
+                                <div class="article__title text-center">
+                                    <h1 class="h2">Product Links in<br> WooCommerce Order Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
+                                </div>
+                                <div class="article__body"> <img alt="Image" src="../img/blog-1.jpg">
+                                    <p> To link a product name with its product page in your order emails, open the <span class="type--bold">functions.php</span> file of your child theme and add the following snippet of code: </p>
+<pre>/**
+* Product Links in WooCommerce Order Emails
+* More tips: https://themes.email/woocommerce.html
+*/
+   
+    add_filter('woocommerce_order_item_name', 'woocommerce_order_item_link', 10, 3);
+
+    function woocommerce_order_item_link( $item_name, $item, $bool ) {
+        $url = get_permalink( $item['product_id'] ) ;
+        return '<a href="'. $url .'">'. $item_name .'</a>'; 
+    }
+</pre>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg--secondary">
+                <div class="container">
+                    <div class="row text-block">
+                        <div class="col-md-12">
+                            <h3>Tutorials</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="feature feature-1">
+                                <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <div class="feature__body boxed boxed--border">
+                                    <h5>How to Translate WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html">
+                                    Learn More >>
+                                    </a> </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="feature feature-1">
+                                <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <div class="feature__body boxed boxed--border">
+                                    <h5>How to Enable and Disable One of WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html">
+                                    Learn More >>
+                                    </a> </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="feature feature-1">
+                                <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <div class="feature__body boxed boxed--border">
+                                    <h5>2019’s Best Selling WooCommerce Email Templates</h5> <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html">
+                                    Learn More >>
+                                    </a> </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-6">
+                            <div class="cta">
+                                <a class="btn btn--primary btn--lg type--uppercase" href="https://codecanyon.net/item/woocommerce-email-templates/19426171"> 
+                                    <span class="btn__text">Purchase WooCommerce Email Templates</span>
+                                    <span class="label">$35 USD</span> </a>
+                                <p class="lead"> Each purchase of WET comes with 20 different styles —<br> and a lifetime of free fresh designs & bug-fix updates. </p>
+                                <p class="type--fine-print">One purchase for all your <a href="#">future projects</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer-3 text-center-xs space--xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6"> <img alt="Image" class="logo" src="../img/logo.png">
+                            <ul class="list-inline list--hover">
+                                <li> <a href="https://themesemail.freshdesk.com/"><span class="type--fine-print">Help Desk</span></a> </li>
+                                <li> <a href="mailto:hello@themes.email"><span class="type--fine-print">hello@themes.email</span></a> </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 text-right text-center-xs">
+                            <ul class="social-list list-inline list--hover">
+                                <li><a href="https://twitter.com/ThemesEmail"><i class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                                <li><a href="https://www.facebook.com/ThemesEmail"><i class="socicon socicon-facebook icon icon--xs"></i></a></li>
+                                <li><a href="https://github.com/ThemesEmail"><i class="socicon socicon-github icon icon--xs"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="type--fine-print"><span class="update-year">2019</span>'s Best Selling WooCommerce Email Templates on Envato.</p>
+                        </div>
+                        <div class="col-sm-6 text-right text-center-xs"> <span class="type--fine-print">© <span class="update-year">2019</span>&nbsp;Themes Email, Inc.</span> <a class="type--fine-print" href="https://themeforest.net/user/jopin/portfolio">Envato Market</a> </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/parallax.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-127309916-1', 'auto'); ga('send', 'pageview');
+        </script>
+
+    </body>
+
+</html>

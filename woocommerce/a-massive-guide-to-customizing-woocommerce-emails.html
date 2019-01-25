@@ -79,14 +79,14 @@
                                     <h1 class="h2">A Massive Guide to Customizing<br>WooCommerce Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
                                 <div class="article__body">
-                                    <h3>1. Customize Email Templates Using the WooCommerce Settings</h3>
+                                    <h3 class="color--primary">1. Customize Email Templates Using the WooCommerce Settings</h3>
                                     <p> Go to <span class="type--bold">WooCommerce > Settings > Emails</span>, and you will find the Email Template section.</p>
                                     <figure class="text-center">
                                         <img alt="IMG 1" src="../img/blog-1.jpg">
                                         <figcaption>IMG 1</figcaption>
                                     </figure>
                                     <p>Here you will find some options for changing the logo, footer text, and colors. For more advanced modifications, you will have to modify the files and upload them via FTP.</p><br>
-                                    <h3>2. Customize Email Templates Using Custom HTML & CSS</h3>
+                                    <h3 class="color--primary">2. Customize Email Templates Using Custom HTML & CSS</h3>
                                     <p>Email templates depend on HTML & CSS just like page templates do. If you’re familiar with HTML & CSS, then you can modify the email templates using your favorite code or text editor. The advantage of this method is that it gives you more control over the templates. This method is meant for developers or advanced users.</p>
                                     <figure class="text-center">
                                         <img alt="IMG 2" src="../img/blog-1.jpg">
@@ -101,7 +101,7 @@
                                     </ul>
 
                                     <p>You can add all the CSS rules you want into the <span class="type--bold">email-styles.php</span> file, and WooCommerce will take care of adding them to <span class="type--bold">email-header.php</span> and <span class="type--bold">email-footer.php</span> files as inline styles.</p>
-                                    <p class="type--italic type--fade"><span class="type--bold">TIP:</span> Make sure you don’t add any inline comments into your CSS styles. Comments break this feature, and your styles won’t be applied.</p>
+                                    <p style="font-size: 1em" class="type--italic"><span class="type--bold">TIP:</span> Make sure you don’t add any inline comments into your CSS styles. Comments break this feature, and your styles won’t be applied.</p>
                                     <br>
 
                                     <h3>Modification Example</h3>
@@ -109,14 +109,16 @@
                                     <p>Open your email as a preview in Google Chrome (<span class="type--bold">WooCommerce > Settings > Emails > Email Template</span> — <span class="type--underline">Click here to preview your email template</span>) and open the Dev Tools (key F12 and click <span class="type--bold">Select an element to inspect it</span>).</p>
                                     <p>Now hover over the heading text you want to change and then click. You should have selected the heading element and see something like this:</p>
                                     <pre>&lt;h1&gt;This is heading 1 - the anchor text&lt;/h1&gt;</pre>
-                                    <p class="type--fade type--italic">This is an HTML element from the <span class="type--bold">email-header.php</span> file.</p>
+                                    <p style="font-size: 1em" class="type--italic">This is an HTML element from the <span class="type--bold">email-header.php</span> file.</p>
+                                    <br>
                                     <p>Now look in the right sidebar of the Dev Tools, and you should see something like this:</p>
                                     <pre>h1 {
 color: #666666;
 font-family: Arial;
 font-size: 30px;
 }</pre>
-                                    <p class="type--fade type--italic">This is a set of CSS rules from the <span class="type--bold">email-styles.php</span> file.</p>
+                                    <p style="font-size: 1em" class="type--italic">This is a set of CSS rules from the <span class="type--bold">email-styles.php</span> file.</p>
+                                    <br>
                                     <p>Locate and replace the <span class="type--bold">anchor text</span> inside the h1 element in the <span class="type--bold">email-header.php</span> file and save it. Then locate and replace the CSS attribute <span class="type--bold">font-family</span> in the <span class="type--bold">email-styles.php</span> file and save it. Now you just need to upload these files via FTP to overwrite the old files.</p>
                                     <br>
                                     <h3>Graphics in Emails</h3>

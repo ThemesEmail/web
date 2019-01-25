@@ -79,7 +79,109 @@
                                     <h1 class="h2">Earn Money with WordPress Plugins</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
                                 <div class="article__body"> <img alt="Image" src="../img/blog-1.jpg">
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> Promote our email templates in the admin area of your plugin and receive a commission on each sale you make. </p>
+                                    <br>
+
+                                    <h3>Themes Email Affiliate Program</h3>
+
+                                    <h5>Affiliate Benefits</h5>
+                                    <ul class="bullets">
+                                        <li>$10 commission rate for each sale through your plugin</li>
+                                        <li>The more downloads your plugin has, the more you earn</li>
+                                        <li>Commission is paid monthly</li>
+                                    </ul>
+                                    <h5>Requirements for a Plugin</h5>
+                                    <ul class="bullets">
+                                        <li>Related to WooCommerce</li>
+                                        <li>At least 500 downloads</li>
+                                        <li>100% working and maintained</li>
+                                        <li>Hosted in the WordPress.org repository or GitHub</li>
+                                    </ul>
+                                    <br>
+                                    <h3>Ready to Become an Affiliate?</h3>
+                                    <p>The Themes Email Affiliate Program offers a flexible and unlimited source of income to all WordPress/WooCommerce plugin developers.</p>
+                                    <p>Add the submenu page <span class="type--bold">Email Templates</span> into your plugin to display the available email templates and start earning your commission.</p>
+                                    <br>
+                                    <h3>How to Add the Email Templates page?</h3>
+
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <h4>Create a <span class="type--bold">email-templates.php</span> file with content:</h4>
+                                                <pre>&lt;?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+// echo WooCommerce Email Templates
+$templates = file_get_contents('https://s3.amazonaws.com/affiliate.themes.email/woocommerce/templates.html');
+echo $templates;
+?&gt;</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <h4>Place the <span class="type--bold">email-templates.php</span> file next to the main file of your plugin.</h4>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>Open the main file of your plugin and paste this snippet of code:</h4>
+                                                <pre style="max-height: 800px">// check if WET is installed
+function wet_installed_email_templates(){
+    // check if the file email-styles.php exist.
+    $wet_path =  get_template_directory() . '/woocommerce/emails/email-styles.php';
+
+    if(file_exists($wet_path)){
+        $installed_email_templates = 0;
+    } else {
+        $installed_email_templates = 1;
+    }
+    return $installed_email_templates;
+}
+
+
+// add submenu page email templates
+add_action('admin_menu', 'add_submenu_page_email_templates');
+
+function add_submenu_page_email_templates() {
+    // NOTIFICATION BUBBLE: The number of updated Email Templates (0 = hide the bubble)
+    $notification_count = wet_installed_email_templates();
+
+    add_submenu_page( 
+        'woocommerce',
+        'Email Templates',
+        $notification_count ? sprintf('Email Templates <span class="awaiting-mod update-plugins">%d</span>', $notification_count) : 'Email Templates',
+        'manage_options', 
+        'wc-email-templates', 
+        'submenu_page_email_templates_callback' 
+    ); 
+}
+
+function submenu_page_email_templates_callback() {
+    include( 'email-templates.php' );
+}
+</pre>
+                                            </div>
+                                        </li>
+                                    </ol>
+
+
+                                    <figure class="text-center">
+                                        <img alt="Results" src="../img/blog-1.jpg">
+                                        <figcaption>Results</figcaption>
+                                    </figure>
+                                    <br>
+                                    <h4>Become an Affiliate</h4>
+                                    <p>Contact us at <span class="type--bold">admin@themes.email</span></p>
+                                    <br>
+
+
+
                                 </div>
                             </article>
                         </div>
@@ -96,27 +198,27 @@
                     <div class="row">
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="#" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <a href="../woocommerce/how-to-add-a-banner-in-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
                                 <div class="feature__body boxed boxed--border">
-                                    <h5>Tutorial 1</h5> <a href="#">
+                                    <h5>How to Add a Banner in WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-add-a-banner-in-woocommerce-order-emails.html">
                                     Learn More >>
                                     </a> </div>
                             </article>
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="#" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
                                 <div class="feature__body boxed boxed--border">
-                                    <h5>Tutorial 2</h5> <a href="#">
+                                    <h5>How to Enable and Disable One of WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html">
                                     Learn More >>
                                     </a> </div>
                             </article>
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="#" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
+                                <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/blog-1.jpg"> </a>
                                 <div class="feature__body boxed boxed--border">
-                                    <h5>Tutorial 3</h5> <a href="#">
+                                    <h5>How to Translate WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html">
                                     Learn More >>
                                     </a> </div>
                             </article>

@@ -2591,7 +2591,7 @@ iframe {
   max-width: 100%;
 }
 .video-cover iframe {
-  background: #252525;
+  background: #000000;
 }
 .video-cover .background-image-holder {
   z-index: 3;
@@ -6737,7 +6737,7 @@ a.block:hover > .feature {
   margin-left: 0.46428571em;
 }
 .video-cover {
-  background: #252525;
+  background: #000000;
 }
 .video-cover.border--round {
   overflow: hidden;

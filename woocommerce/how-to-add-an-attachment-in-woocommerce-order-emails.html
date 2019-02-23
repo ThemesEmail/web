@@ -78,7 +78,12 @@
                                 <div class="article__title text-center">
                                     <h1 class="h2">How to Add an Attachment in<br> WooCommerce Order Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
-                                <div class="article__body"> <img alt="Image" src="../img/blog-1.jpg"><br>
+                                <div class="article__body">
+                                    <figure class="text-center"> 
+                                        <img class="box-shadow-wide" alt="How to Add an Attachment in WooCommerce Order Emails" src="../img/tutorials/woocommerce/add-attachment.png">
+                                        <figcaption>How to Add an Attachment in WooCommerce Order Emails</figcaption>
+                                    </figure>
+                                    <br>
                                     <p> To add an attachment to your order emails, open the <span class="type--bold">functions.php</span> file of your child theme and add the following snippet of code: </p>
                                     <pre>/**
  * Add Attachment in WooCommerce Order Emails
@@ -88,18 +93,18 @@
 add_filter( ‘woocommerce_email_attachments’, ‘attach_to_wc_emails’, 10, 3);
 
 function attach_to_wc_emails ( $attachments , $id, $object ) {
- 
+
 	$file_path = get_template_directory() . ‘/file.pdf’; // directory of the current theme
- 
+
  	 // if a child theme is being used then use this line to get the directory
  	// $file_path = get_stylesheet_directory() . ‘/file.pdf’;
- 
+
 	$attachments[] = $file_path;
 	return $attachments;
 }
                                     </pre>
                                     <p>Just edit the <span class="type--bold">$file_path</span> variable to get the file location.</p>
-                                    
+
                                 </div>
                             </article>
                         </div>
@@ -116,7 +121,7 @@ function attach_to_wc_emails ( $attachments , $id, $object ) {
                     <div class="row">
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/a-massive-guide-to-customizing-woocommerce-emails.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/customization.png"> </a>
+                                <a href="../woocommerce/a-massive-guide-to-customizing-woocommerce-emails.html" class="block"> <img alt="A Massive Guide to Customizing WooCommerce Emails" src="../img/tutorials/woocommerce/customization.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>A Massive Guide to Customizing WooCommerce Emails</h5> <a href="../woocommerce/a-massive-guide-to-customizing-woocommerce-emails.html">
                                     Learn More >>
@@ -125,7 +130,7 @@ function attach_to_wc_emails ( $attachments , $id, $object ) {
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/product-thumbnails-in-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/thumbnails.png"> </a>
+                                <a href="../woocommerce/product-thumbnails-in-woocommerce-order-emails.html" class="block"> <img alt="Product Thumbnails in WooCommerce Order Emails" src="../img/tutorials/woocommerce/thumbnails.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>Product Thumbnails in WooCommerce Order Emails</h5> <a href="../woocommerce/product-thumbnails-in-woocommerce-order-emails.html">
                                     Learn More >>
@@ -134,7 +139,7 @@ function attach_to_wc_emails ( $attachments , $id, $object ) {
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/earn-money-with-wordpress-plugins.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/earn-money.png"> </a>
+                                <a href="../woocommerce/earn-money-with-wordpress-plugins.html" class="block"> <img alt="Earn Money with WordPress Plugins" src="../img/tutorials/woocommerce/earn-money.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>Earn Money with WordPress Plugins</h5> <a href="../woocommerce/earn-money-with-wordpress-plugins.html">
                                     Learn More >>
@@ -162,7 +167,7 @@ function attach_to_wc_emails ( $attachments , $id, $object ) {
             <footer class="footer-3 text-center-xs space--xs">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6"> <img alt="Image" class="logo" src="../img/logo.png">
+                        <div class="col-sm-6"> <img alt="logo" class="logo" src="../img/logo.png">
                             <ul class="list-inline list--hover">
                                 <li> <a href="../helpdesk.html"><span class="type--fine-print">Help Desk</span></a> </li>
                                 <li> <a href="mailto:hello@themes.email"><span class="type--fine-print">hello@themes.email</span></a> </li>

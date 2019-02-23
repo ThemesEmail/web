@@ -78,13 +78,17 @@
                                 <div class="article__title text-center">
                                     <h1 class="h2">Product Links in<br> WooCommerce Order Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
-                                <div class="article__body"> <img alt="Image" src="../img/blog-1.jpg">
+                                <div class="article__body"> 
+                                    <figure class="text-center">
+                                        <img class="box-shadow-wide" alt="Product Links in WooCommerce Order Emails" src="../img/tutorials/woocommerce/add-product-links.png">
+                                        <figcaption>Product Links in WooCommerce Order Emails</figcaption>
+                                    </figure>
                                     <p> To link a product name with its product page in your order emails, open the <span class="type--bold">functions.php</span> file of your child theme and add the following snippet of code: </p>
-<pre>/**
+                                    <pre>/**
 * Product Links in WooCommerce Order Emails
 * More tips: https://themes.email/woocommerce.html
 */
-   
+
     add_filter('woocommerce_order_item_name', 'woocommerce_order_item_link', 10, 3);
 
     function woocommerce_order_item_link( $item_name, $item, $bool ) {
@@ -108,7 +112,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/translations.png"> </a>
+                                <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html" class="block"> <img alt="How to Translate WooCommerce Order Emails" src="../img/tutorials/woocommerce/translations.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>How to Translate WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html">
                                     Learn More >>
@@ -117,7 +121,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/enable-disable.png"> </a>
+                                <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html" class="block"> <img alt="How to Enable and Disable One of WooCommerce Order Emails" src="../img/tutorials/woocommerce/enable-disable.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>How to Enable and Disable One of WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html">
                                     Learn More >>
@@ -126,7 +130,7 @@
                         </div>
                         <div class="col-md-4">
                             <article class="feature feature-1">
-                                <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html" class="block"> <img alt="Image" src="../img/tutorials/woocommerce/best-selling.png"> </a>
+                                <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html" class="block"> <img alt="Best Selling WooCommerce Email Templates" src="../img/tutorials/woocommerce/best-selling.png"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>2019’s Best Selling WooCommerce Email Templates</h5> <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html">
                                     Learn More >>
@@ -154,7 +158,7 @@
             <footer class="footer-3 text-center-xs space--xs">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6"> <img alt="Image" class="logo" src="../img/logo.png">
+                        <div class="col-sm-6"> <img alt="logo" class="logo" src="../img/logo.png">
                             <ul class="list-inline list--hover">
                                 <li> <a href="../helpdesk.html"><span class="type--fine-print">Help Desk</span></a> </li>
                                 <li> <a href="mailto:hello@themes.email"><span class="type--fine-print">hello@themes.email</span></a> </li>

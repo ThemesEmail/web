@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Product Links in WooCommerce Order Emails</title>
+        <title>How to Add Custom Fonts in WooCommerce Order Emails</title>
         <meta name="description" content="Step-by-step Tutorial" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="../img/icons/favicon-32x32.png">
@@ -76,26 +76,68 @@
                         <div class="col-md-10 col-lg-8">
                             <article>
                                 <div class="article__title text-center">
-                                    <h1 class="h2">Product Links in<br> WooCommerce Order Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
+                                    <h1 class="h2">How to Add Custom Fonts in<br>WooCommerce Order Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
-                                <div class="article__body"> 
-                                    <figure class="text-center">
-                                        <img class="boxed boxed--border box-shadow" alt="Product Links in WooCommerce Order Emails" src="../img/tutorials/woocommerce/links.png">
-                                        <figcaption>Product Links in WooCommerce Order Emails</figcaption>
+                                <div class="article__body">
+                                    <figure class="text-center"> 
+                                        <img class="boxed boxed--border box-shadow" alt="Custom Fonts in WooCommerce Order Emails" src="../img/tutorials/woocommerce/fonts.png">
+                                        <figcaption>Custom Fonts in WooCommerce Order Emails</figcaption>
                                     </figure>
-                                    <p> To link a product name with its product page in your order emails, open the <span class="type--bold">functions.php</span> file of your child theme and add the following snippet of code: </p>
-                                    <pre>/**
-* Product Links in WooCommerce Order Emails
-* More tips: https://themes.email/woocommerce.html
-*/
+                                    <br><br>    
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <h4>Upload your fonts to your WordPress, CDN or use third party service like <a href="https://fonts.google.com/" target="_blank">Google Fonts ↗</a>.</h4>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <h4>Open the file <span class="type--bold">email-header.php</span> and copy the URL of the font into the &lt;head&gt; tag of the document,—for example,</h4>
+                                                <pre>&lt;head&gt;
+...
+...
+&lt;link href="https://fonts.googleapis.com/css?family=<strong>MyNewFont</strong>" rel="stylesheet"&gt;
+&lt;/head&gt;</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>Use the following CSS rules to specify these families in files <span class="type--bold">email-header.php</span>, <span class="type--bold">email-footer.php</span> and <span class="type--bold">email-styles.php</span>,</h4>
+                                                <pre>font-family: '<strong>MyNewFont</strong>', sans-serif;</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <!-- <div class="process__number"><span>a</span></div> -->
+                                            <div class="process__body">
+                                                <h4>Style an element with your new font, either in a stylesheet:</h4>
+                                                <pre>.selector {
+  font-family: '<strong>MyNewFont</strong>', serif;
+}</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <!-- <div class="process__number"><span>b</span></div> -->
+                                            <div class="process__body">
+                                                <h4>or with an inline style on the element itself:</h4>
+                                                <pre>&lt;h1 style="font-family: '<strong>MyNewFont</strong>', serif;"&gt;Your text&lt;/h1&gt;</pre>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    <br>
+                                    <h3>Email Templates Main Files</h3>
+                                    <ul class="bullets">
+                                        <li><span class="type--bold">email-header.php.</span> This file contains the HTML header of the email.</li>
+                                        <li><span class="type--bold">email-footer.php.</span> This file contains the HTML footer of email.</li>
+                                        <li><span class="type--bold">email-styles.php.</span> WooCommerce takes a set of CSS rules and dynamically inserts them into the template as inline styles.</li>
+                                    </ul>
 
-    add_filter('woocommerce_order_item_name', 'woocommerce_order_item_link', 10, 3);
 
-    function woocommerce_order_item_link( $item_name, $item, $bool ) {
-        $url = get_permalink( $item['product_id'] ) ;
-        return '<a href="'. $url .'">'. $item_name .'</a>'; 
-    }
-</pre>
+
+
                                 </div>
                             </article>
                         </div>
@@ -112,27 +154,27 @@
                     <div class="row">
                         <div class="col-md-4">
                             <article class="feature feature-1">
+                                <a href="../woocommerce/product-links-in-woocommerce-order-emails.html" class="block"> <img alt="Product Links in WooCommerce Order Emails" src="../img/tutorials/woocommerce/thumbs/links.png"> </a>
+                                <div class="feature__body boxed boxed--border">
+                                    <h5>Product Links in WooCommerce Order Emails</h5> <a href="../woocommerce/product-links-in-woocommerce-order-emails.html">
+                                    Learn More >>
+                                    </a> </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="feature feature-1">
+                                <a href="../woocommerce/how-to-add-an-attachment-in-woocommerce-order-emails.html" class="block"> <img alt="How to Add an Attachment in WooCommerce Order Emails" src="../img/tutorials/woocommerce/thumbs/attachment.png"> </a>
+                                <div class="feature__body boxed boxed--border">
+                                    <h5>How to Add an Attachment in WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-add-an-attachment-in-woocommerce-order-emails.html">
+                                    Learn More >>
+                                    </a> </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="feature feature-1">
                                 <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html" class="block"> <img alt="How to Translate WooCommerce Order Emails" src="../img/tutorials/woocommerce/thumbs/translations.jpg"> </a>
                                 <div class="feature__body boxed boxed--border">
                                     <h5>How to Translate WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-translate-woocommerce-order-emails.html">
-                                    Learn More >>
-                                    </a> </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="feature feature-1">
-                                <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html" class="block"> <img alt="How to Enable and Disable One of WooCommerce Order Emails" src="../img/tutorials/woocommerce/thumbs/enable-disable-emails.png"> </a>
-                                <div class="feature__body boxed boxed--border">
-                                    <h5>How to Enable and Disable One of WooCommerce Order Emails</h5> <a href="../woocommerce/how-to-enable-and-disable-one-of-woocommerce-order-emails.html">
-                                    Learn More >>
-                                    </a> </div>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="feature feature-1">
-                                <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html" class="block"> <img alt="Best Selling WooCommerce Email Templates" src="../img/tutorials/woocommerce/thumbs/best-selling.jpg"> </a>
-                                <div class="feature__body boxed boxed--border">
-                                    <h5>2019’s Best Selling WooCommerce Email Templates</h5> <a href="../woocommerce/2019s-best-selling-woocommerce-email-templates.html">
                                     Learn More >>
                                     </a> </div>
                             </article>

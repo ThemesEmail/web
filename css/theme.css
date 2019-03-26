@@ -6738,6 +6738,7 @@ a.block:hover > .feature {
 }
 .video-cover {
   background: #ffffff;
+    padding: 2px; /* FIX by Jopin - Youtube videos causing 1px black line on white bg */
 }
 .video-cover.border--round {
   overflow: hidden;

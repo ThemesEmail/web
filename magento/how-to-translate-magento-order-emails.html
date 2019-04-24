@@ -83,7 +83,13 @@
                                         <img class="box-shadow-wide" alt="How to Translate Magento Order Emails" src="../img/tutorials/magento/translations.png">
                                         <figcaption>How to Translate Magento Order Emails</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> To support the translation of content, all strings in emails are output using the trans directive. For example, </p>
+                                    <pre>{{trans "Thank you for your order from %store_name." store_name=$store.getFrontendName()}}
+{{trans "Once your package ships we will send you a tracking number."}}</pre>
+                                    <p>The trans directive will translate strings into whatever locale is configured for the store from which the email is being sent. For example, if an email is being sent from a store view that is configured to use the <span class="type--bold">fr_FR</span> locale, the emails will be translated into French.</p>
+                                    <p>The directive supports multiple named parameters separated by spaces. For example,</p>    
+                                    <pre>{{trans "Dear %first_name %last_name," first_name=$first_name last_name=$last_name}}</pre>
+                                    <p><span class="type--bold">TIP:</span> Learn more about how translations work in Magento check <a href="https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/translations/xlate.html" target="_blank">documentation ↗</a>.</p>
                                 </div>
                             </article>
                         </div>

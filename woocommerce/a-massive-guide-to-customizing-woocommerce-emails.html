@@ -79,19 +79,24 @@
                                     <h1 class="h2">A Massive Guide to Customizing<br>WooCommerce Emails</h1> <span>Category: </span><span><a href="../woocommerce.html">WooCommerce</a></span> 
                                 </div>
                                 <div class="article__body">
-                                    <h3 class="color--primary">1. Customize Email Templates Using the WooCommerce Settings</h3>
+                                    <p> You can customize templates as physical files in your theme or customize them using the WordPress dashboard. Both approaches are described in the following sections. </p>
+                                    <br>
+                                    <h3 class="color--primary">Customize Email Templates Using the WooCommerce Settings</h3>
                                     <p> Go to <span class="type--bold">WooCommerce > Settings > Emails</span>, and you will find the Email Template section.</p>
                                     <figure class="text-center">
                                         <img class="box-shadow-wide" src="../img/tutorials/woocommerce/customize-settings.png" alt="Customize Email Templates Using the WooCommerce Settings">
                                         <figcaption>Customize Email Templates Using the WooCommerce Settings</figcaption>
                                     </figure>
-                                    <p>Here you will find some options for changing the logo, footer text, and colors. For more advanced modifications, you will have to modify the files and upload them via FTP.</p><br>
-                                    <h3 class="color--primary">2. Customize Email Templates Using Custom HTML & CSS</h3>
+                                    <p>Here you will find some options for changing the logo, footer text, and colors. For more advanced modifications, you will have to modify the files and upload them via FTP.</p>
+                                    <br>
+                                    <br>
+                                    <h3 class="color--primary">Customize Email Templates Using Custom HTML & CSS</h3>
                                     <p>Email templates depend on HTML & CSS just like page templates do. If you’re familiar with HTML & CSS, then you can modify the email templates using your favorite code or text editor. The advantage of this method is that it gives you more control over the templates. This method is meant for developers or advanced users.</p>
                                     <figure class="text-center">
                                         <img src="../img/tutorials/woocommerce/customize-files.png" alt="Customize Email Templates Using Custom HTML & CSS">
                                         <figcaption>Customize Email Templates Using Custom HTML & CSS</figcaption>
                                     </figure>
+                                    <br>
                                     <br>
                                     <h3>Email Templates Main Files</h3>
                                     <ul class="bullets">
@@ -101,7 +106,9 @@
                                     </ul>
 
                                     <p>You can add all the CSS rules you want into the <span class="type--bold">email-styles.php</span> file, and WooCommerce will take care of adding them to <span class="type--bold">email-header.php</span> and <span class="type--bold">email-footer.php</span> files as inline styles.</p>
-                                    <p style="font-size: 1em" class="type--italic"><span class="type--bold">TIP:</span> Make sure you don’t add any inline comments into your CSS styles. Comments break this feature, and your styles won’t be applied.</p>
+
+                                    <div class="boxed bg--secondary boxed--lg boxed--border"><div class="type--bold">Note</div> Make sure you don’t add any inline comments into your CSS styles. Comments break this feature, and your styles won’t be applied.</div>
+                                    <br>
                                     <br>
 
                                     <h3>Modification Example</h3>
@@ -111,6 +118,7 @@
                                     <pre>&lt;h1&gt;This is heading 1 - the anchor text&lt;/h1&gt;</pre>
                                     <p style="font-size: 1em" class="type--italic">This is an HTML element from the <span class="type--bold">email-header.php</span> file.</p>
                                     <br>
+                                    <br>
                                     <p>Now look in the right sidebar of the Dev Tools, and you should see something like this:</p>
                                     <pre>h1 {
 color: #666666;
@@ -119,20 +127,25 @@ font-size: 30px;
 }</pre>
                                     <p style="font-size: 1em" class="type--italic">This is a set of CSS rules from the <span class="type--bold">email-styles.php</span> file.</p>
                                     <br>
+                                    <br>
                                     <p>Locate and replace the <span class="type--bold">anchor text</span> inside the h1 element in the <span class="type--bold">email-header.php</span> file and save it. Then locate and replace the CSS attribute <span class="type--bold">font-family</span> in the <span class="type--bold">email-styles.php</span> file and save it. Now you just need to upload these files via FTP to overwrite the old files.</p>
+                                    <br>
                                     <br>
                                     <h3>Graphics in Emails</h3>
                                     <p>You can’t send graphics along with your email. The only way to do that is to host the graphics on a server and then  insert the code into your HTML emails to download the graphics when the message is opened.</p>
                                     <p>It is important to note that HTML emails generally only support <span class="type--bold">absolute paths</span> to links and images embedded within your emails. The absolute path provides the complete HTTP address–the protocol, domain, directory path, and file name with its suffix.</p>
                                     <pre>https://themes.email/images/banner.png</pre>
                                     <br>
+                                    <br>
                                     <h3>Where to Host Images?</h3>
                                     <p>If you’re sending emails to thousands of people per day, then you should consider storing your images on a content delivery network (CDN) such as Amazon’s CloudFront. Otherwise, uploading your image to your WordPress will be enough.</p>
                                     <p>A good tip is to upload all your images at the very beginning so you have absolute paths to images from the start.</p>
                                     <br>
+                                    <br>
                                     <h3>Linking to an Image in HTML</h3>
                                     <p>In HTML, use absolute paths that point back to your WordPress or CDN where the image is located.</p>
                                     <pre>&lt;img src=“https://themes.email/images/banner.png” alt=“Banner”&gt;</pre>
+                                    <br>
                                     <br>
                                     <h3>Image Formats</h3>
                                     <p>The three most common formats that are predominantly used in emails are JPEG, GIF, and PNG. Here are the best use cases for all the image file formats:</p>
@@ -142,8 +155,10 @@ font-size: 30px;
                                         <li><span class="type--bold">PNG:</span> When you need your image to blend in with the background color.</li>
                                     </ul>
                                     <br>
+                                    <br>
                                     <h3>Retina Images</h3>
                                     <p>A high-density display has double the pixel density of a standard display. This means a container of 600 px containing the image of 600 px will be stretched to 1200 px. Therefore, the image will also stretch to 1200 px and become blurred out. It is a good practice to have an image of 1200 px squeezed inside a container of 600 px to render a pixel-perfect image in your emails.</p>
+                                    <br>
                                     <br>
                                     <h3>Videos</h3>
                                     <p>Many email clients can’t support video rendering, so avoid videos all together.</p>

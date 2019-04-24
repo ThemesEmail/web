@@ -83,7 +83,14 @@
                                         <img class="boxed boxed--border box-shadow" alt="Product Links in Magento Order Emails" src="../img/tutorials/magento/links.png">
                                         <figcaption>Product Links in Magento Order Emails</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> To link a product name with its product page in your order emails, edit following files: </p>
+                                    <pre>Magento_Sales/templates/email/items/order/default.phtml<br>Magento_Sales/templates/email/items/invoice/default.phtml<br>Magento_Sales/templates/email/items/shipment/default.phtml</pre>
+                                    <p>To get the product URL, use the following snippet of code and insert it into a href attribute of the link.</p>
+                                    <pre>&lt;?= $_item->getProduct()->getProductUrl(); ?&gt;</pre>
+                                    <p>For example,</p>
+                                    <pre>&lt;p class="product-name"&gt; &lt;a href="&lt;?= $_item->getProduct()->getProductUrl(); ?&gt;"&gt; &lt;?= $block->escapeHtml($_item->getName()); ?&gt; &lt;/a&gt; &lt;/p&gt;</pre>
+                                    <p>The result of the snippet of code will be a clickable product name in Magento Emails.</p>
+                                    
                                 </div>
                             </article>
                         </div>

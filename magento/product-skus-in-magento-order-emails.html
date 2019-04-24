@@ -83,7 +83,15 @@
                                         <img class="boxed boxed--border box-shadow" alt="Product SKUs in Magento Order Emails" src="../img/tutorials/magento/skus.png">
                                         <figcaption>Product SKUs in Magento Order Emails</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> By default, the product SKU in Magento order emails is shown by following snippet of code: </p>
+                                    <pre>&lt;p class="sku"&gt; &lt;?= /* @escapeNotVerified */  __(‘SKU’) ?&gt;: &lt;?= $block->escapeHtml($block->getSku($_item)) ?&gt; &lt;/p&gt;</pre>
+                                    <p>in following files:</p>
+                                    <pre>Magento_Sales/templates/email/items/order/default.phtml<br>Magento_Sales/templates/email/items/invoice/default.phtml<br>Magento_Sales/templates/email/items/shipment/default.phtml</pre>
+                                    
+                                    <p>To get rid of SKUs, we recommend editing the <span class="type--bold">source/_email-extend.less</span> file for your custom theme and adding the <span class="type--bold">display none</span> parameter. For example,</p>
+                                    <pre>.sku { 
+display: none;
+}</pre>
                                 </div>
                             </article>
                         </div>

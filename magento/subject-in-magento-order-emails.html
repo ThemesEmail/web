@@ -79,11 +79,49 @@
                                     <h1 class="h2">Subject in Magento Order Emails</h1> <span>Category: </span><span><a href="../magento.html">Magento</a></span> 
                                 </div>
                                 <div class="article__body"> 
-                                    <figure class="text-center"> 
-                                        <img class="box-shadow-wide" alt="Subject in Magento Order Emails" src="../img/tutorials/magento/subject.png">
-                                        <figcaption>Subject in Magento Order Emails</figcaption>
-                                    </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+
+                                    <p> You can set the subject of emails using either the Magento Admin or a theme. </p>
+                                    <br>
+                                    <h3>Set Subject Using the Magento Admin</h3>
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <h4>Go to <span class="type--bold">Marketing</span> > <span class="type--bold">Communications</span> > <span class="type--bold">Email Templates</span> and click <span class="type--bold">Add New Template</span>.</h4><br>
+                                                <figure class="text-center"> 
+                                                    <img alt="Subject in Magento Order Emails" src="../img/tutorials/magento/subject.png">
+                                                    <figcaption>Subject in Magento Order Emails</figcaption>
+                                                </figure>
+                                            </div>
+
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <h4>Choose the template and click <span class="type--bold">Load Template</span>.</h4>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>In <span class="type--bold">Template Subject</span>, add plain text to use as the subject of the emails sent using the template you create.</h4>
+                                                <br>
+                                                <h4>This field can contain system variables. For example, </h4>
+                                                <pre>{{var store.getFrontendName()}}: New Order #{{var order.increment_id}}</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>Click <span class="type--bold">Save Template</span>.</h4>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br><br>
+
+                                    <h3>Set Subject Using a Theme</h3>
+                                    <p>You can set the subject for an email by customizing its HTML file via</p>
+                                    <pre>&lt;!--@subject {{trans "Your %store_name order confirmation" store_name=$store.getFrontendName()}} @--&gt;</pre><br>
                                 </div>
                             </article>
                         </div>

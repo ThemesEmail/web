@@ -78,12 +78,48 @@
                                 <div class="article__title text-center">
                                     <h1 class="h2">How to Add a Banner in<br> Magento Order Emails</h1> <span>Category: </span><span><a href="../magento.html">Magento</a></span> 
                                 </div>
-                                <div class="article__body"> 
-                                    <figure class="text-center"> 
-                                        <img alt="How to Add a Banner in Magento Order Emails" src="../img/tutorials/magento/banner.png">
-                                        <figcaption>How to Add a Banner in Magento Order Emails</figcaption>
-                                    </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                <div class="article__body">
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <h4>Upload your banner to your Magento or CDN.</h4>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <h4>Link the URL of the banner in HTML. For example,</h4>
+                                                <pre>&lt;img src="https://themes.email/images/banner.png" alt="Banner"&gt;</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>Locate where you want to place the banner and add the HTML you created in step 2.</h4>
+                                                <br>
+                                                <h4><span class="type--bold">Note:</span> every email contains the <span class="type--bold">header.html</span> and <span class="type--bold">footer.html</span> files. Alternatively, you can add the banner to a specific email only—for example, <span class="type--bold">order_new.html</span>.</h4>
+                                                <figure class="text-center"> 
+                                                    <img alt="How to Add a Banner in Magento Order Emails" src="../img/tutorials/magento/banner.png">
+                                                    <figcaption>How to Add a Banner in Magento Order Emails</figcaption>
+                                                </figure>
+<pre>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;
+    &lt;tr&gt;
+        &lt;td align="left" valign="top"&gt;
+            &lt;img src="https://themes.email/images/banner.png" alt="Banner"&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <h4>Upload the changed file via FTP to overwrite the old files.</h4>
+                                            </div>
+                                        </li>
+                                    </ol>
+
                                 </div>
                             </article>
                         </div>

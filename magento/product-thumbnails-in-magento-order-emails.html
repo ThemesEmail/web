@@ -83,7 +83,25 @@
                                         <img class="boxed boxed--border box-shadow" alt="Product Thumbnails in Magento Order Emails" src="../img/tutorials/magento/thumbnails.png">
                                         <figcaption>Product Thumbnails in Magento Order Emails</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> To add product thumbnails to your order emails, edit following files: </p><pre>Magento_Sales/templates/email/items/order/default.phtml<br>Magento_Sales/templates/email/items/invoice/default.phtml<br>Magento_Sales/templates/email/items/shipment/default.phtml</pre>
+                                    <p> Add the following snippet of code before the <span class="type--bold">php</span> closing tag: </p>
+                                    <pre>/**
+ * Add product thumbnails on Magento sales emails by ThemesEmail
+ * More tips: https://themes.email/magento.html
+ */
+
+$imageSize = (int)$block->getConfig(‘sales_email/imageconfig/image_resize’);
+if($imageSize <=10)
+   $imageSize = 135;
+$_imagehelper = $this->helper(‘Magento\Catalog\Helper\Image’);
+
+if($childProd = current($_item->getChildrenItems())) {
+    $productImage = $_imagehelper->init($childProd->getProduct(), ‘category_page_list’, array(‘height’ => $imageSize , ‘width’=> $imageSize))->getUrl();
+} else {
+    $productImage = $_imagehelper->init($_item->getProduct(), ‘category_page_list’, array(‘height’ => $imageSize , ‘width’=> $imageSize))->getUrl();
+}</pre>
+                                    <p>To get the product thumbnail, use the following snippet of code and insert it where you want the thumbnail to be displayed.</p>
+                                    <pre>&lt;img src="&lt;?=$productImage?&gt;" title="&lt;?= $block->escapeHtml($_item->getName()) ?&gt;" alt="&lt;?= $block->escapeHtml($_item->getName()) ?&gt;" style="vertical-align:top;" /&gt;</pre>
                                 </div>
                             </article>
                         </div>

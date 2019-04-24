@@ -79,16 +79,344 @@
                                     <h1 class="h2">A Massive Guide to Customizing<br>Magento Emails</h1> <span>Category: </span><span><a href="../magento.html">Magento</a></span> 
                                 </div>
                                 <div class="article__body">
-                                    <figure class="text-center"> 
-                                        <img class="box-shadow-wide" alt="Customize email templates using the Magento Admin" src="../img/tutorials/magento/customize-settings.png">
-                                        <figcaption>Customize email templates using the Magento Admin</figcaption>
-                                    </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> You can customize templates as physical files in your theme or customize them using the Magento Admin. Both approaches are described in the following sections. </p>
+                                    <br>
+                                    <h3 class="color--primary">Customize Email Templates using the Magento Admin</h3>
+                                    <p>Any templates configured in the Magento Admin take precedence over default or theme-based templates.</p>
+
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <p>Go to <span class="type--bold">Marketing</span> > <span class="type--bold">Communications</span> > <span class="type--bold">Email Templates</span> and click <span class="type--bold">Add New Template</span>.</p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <p>If you want to use your newly created theme-based template as a starting point, choose the template in the <span class="type--bold">Load Default Template</span> section and click <span class="type--bold">Load Template</span>.</p>
+                                                <figure class="text-center"> 
+                                                    <img alt="Customize email templates using the Magento Admin" src="../img/tutorials/magento/customize-settings.png">
+                                                    <figcaption>Customize email templates using the Magento Admin</figcaption>
+                                                </figure>
+                                                <div class="boxed bg--secondary boxed--lg boxed--border"><div class="type--bold">Note</div> The path to the configuration settings for each default template is displayed in the <span class="type--bold">Currently Used For</span> field in the <span class="type--bold">Template Information</span> section. Make note of this path because you will need it later when you configure this new template to be used instead of the default template.</div>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <p> In <span class="type--bold">Template Name</span>, enter a name to identify the template in the Magento Admin. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>4</span></div>
+                                            <div class="process__body">
+                                                <p> In <span class="type--bold">Template Subject</span>, add plain text to use as the subject of the emails sent using the template you create. This field can contain system variables. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>5</span></div>
+                                            <div class="process__body">
+                                                <p> Customize the template content. Read more about in the Customize Email Content section below. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>6</span></div>
+                                            <div class="process__body">
+                                                <p> In <span class="type--bold">Template Styles</span>, optionally add CSS styles for the template. These styles are added inside of a <span class="type--bold">&lt;style&gt;</span> tag in the <span class="type--bold"> &lt;head&gt; </span> of the email. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>6</span></div>
+                                            <div class="process__body">
+                                                <p> Click <span class="type--bold">Save Template</span>. </p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    <br>
+                                    <h3>Configure Your Newly Created Template</h3>
+                                    <p>Now that you have created a template, you must configure that template to be used.</p>
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <p> Go to <span class="type--bold">Stores</span> > <span class="type--bold">Settings</span> > <span class="type--bold">Configuration</span> > <span class="type--bold">Sales</span> > <span class="type--bold">Sales Emails</span>. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <p> Locate the section that contains the template you want to override.  </p>
+                                                <div class="boxed bg--secondary boxed--lg boxed--border">
+                                                    <span class="type--bold">Note</span>: This is the section referenced by <span class="type--bold">Currently Used For</span> in your new template.
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <p> Select your newly created template from the list. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>4</span></div>
+                                            <div class="process__body">
+                                                <p> Click <span class="type--bold">Save Config</span>. </p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class="color--primary">Customize Email Templates Using a Theme</h3>
+                                    <p>This pattern is used for each template:</p>
+                                    <pre>[theme]/ModuleVendorName_ModuleName/email</pre>
+
+                                    <p>For example, to customize the <span class="type--bold">New Order</span> email template, locate the template called <span class="type--bold">order_new.html</span> in the <span class="type--bold">[theme]/Magento_Sales/email</span> directory.</p>
+                                    <p>You can customize all emails by customizing their HTML files. Email templates depend on HTML & CSS just like page templates do. If you’re familiar with HTML & CSS, then you can modify the email templates using your favorite code or text editor. The advantage of this method is that it gives you more control over the templates. This method is meant for developers or advanced users.</p>
                                     <figure class="text-center"> 
                                         <img alt="Customize email templates using a theme" src="../img/tutorials/magento/customize-files.png">
                                         <figcaption>Customize email templates using a theme</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <div class="boxed bg--secondary boxed--lg boxed--border"><div class="type--bold">Note</div>Magento fallback is supported for email templates, guaranteeing that if a file is not found in the current theme, the system will search the ancestor themes.</div>
+                                    <br>
+                                    <br>
+                                    <h3>Customize Header and Footer Templates</h3>
+                                    <p>Every frontend email template includes a header and footer template. By default, they load contents from these files:</p>
+                                    <pre>app/design/frontend/[themeVendor]/[theme]/Magento_Email/email/header.html<br>app/design/frontend/[themeVendor]/[theme]/Magento_Email/email/footer.html</pre>
+                                    <p>You can customize header and footer templates using either the theme or admin customization methods discussed previously.</p>
+                                    <br>
+
+                                    <h3>Email Logos</h3>
+                                    <h4>Customize the Email Logo Using the Admin</h4>
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <p> Go to <span class="type--bold">Content</span> > <span class="type--bold">Design</span> > <span class="type--bold">Configuration</span> and click <span class="type--bold">Edit</span> in the configuration record corresponding to your store view. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <p> Under <span class="type--bold">Transactional Emails</span> in the <span class="type--bold">Logo Image</span> field, upload your logo and specify the alternative text for it. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <p> Enter values for <span class="type--bold">Logo Width</span> and <span class="type--bold">Logo Height</span>. </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>4</span></div>
+                                            <div class="process__body">
+                                                <p> Click <span class="type--bold">Save Configuration</span>. </p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+
+                                    <h4>Customize the Email Logo Using a Theme</h4>
+                                    <p>If the logo is not set in the Magento admin, it is loaded by default from the following:</p>
+                                    <pre>app/design/frontend/[themeVendor]/[theme]/Magento_Email/web/logo_email.png</pre>
+                                    <br>
+                                    <p>Follow these steps to customize your logo using a theme:</p>
+
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <p> Replace the logo called <span class="type--bold">logo_email.png</span> located in </p>
+                                                <pre>app/design/frontend/[themeVendor]/[theme]/Magento_Email/web/logo_email.png</pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <p> Open the file <span class="type--bold">header.html</span> located in </p>
+                                                <pre> app/design/frontend/[themeVendor]/[theme]/Magento_Email/email/header.html </pre>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <p> Edit the <span class="type--bold">width</span> and <span class="type--bold">height</span> attributes of the logo </p>
+                                                <pre>{{if logo_width}}
+    width=“{{var logo_width}}”
+{{else}}
+    width=“200”
+{{/if}}
+
+{{if logo_height}}
+    height=“{{var logo_height}}”
+{{else}}
+    height=“100”
+{{/if}}</pre>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    <br>
+                                    <h3>Customize Email Content</h3>
+                                    <p>To add the store and sales-related information to a template, use system variables. System variables are placeholders that are replaced by particular values when the actual email is generated.</p>
+                                    <div class="boxed bg--secondary boxed--lg boxed--border">
+                                        <div class="type--bold">Here is a list of the most commonly used email template variables:</div>  
+                                        Email Footer Template: {{template config_path=“design/email/footer_template”}}<br>
+                                        Email Header Template: {{template config_path=“design/email/header_template”}}<br>
+                                        Email Logo Image Alt: {{var logo_alt}}<br>
+                                        Email Logo Image URL: {{var logo_url}}<br>
+                                        Email Logo Image Height: {{var logo_height}}<br>
+                                        Email Logo Image Width: {{var logo_width}}<br>
+                                        Template CSS: {{var template_styles|raw}}<br>
+                                        Base Unsecure URL: {{config path=“web/unsecure/base_url”}}<br>
+                                        Base Secure URL: {{config path=“web/secure/base_url”}}<br>
+                                        General Contact Name: {{config path=“trans_email/ident_general/name”}}<br>
+                                        Sales Representative Contact Name: {{config path=“trans_email/ident_sales/name”}}<br>
+                                        Sales Representative Contact Email: {{config path=“trans_email/ident_sales/email”}}<br>
+                                        Custom1 Contact Name: {{config path=“trans_email/ident_custom1/name”}}<br>
+                                        Custom1 Contact Email: {{config path=“trans_email/ident_custom1/email”}}<br>
+                                        Custom2 Contact Name: {{config path=“trans_email/ident_custom2/name”}}<br>
+                                        Custom2 Contact Email: {{config path=“trans_email/ident_custom2/email”}}<br>
+                                        Store Name: {{config path=“general/store_information/name”}}<br>
+                                        Store Phone Number: {{config path=“general/store_information/phone”}}<br>
+                                        Store Hours: {{config path=“general/store_information/hours”}}<br>
+                                        Country: {{config path=“general/store_information/country_id”}}<br>
+                                        Region/State: {{config path=“general/store_information/region_id”}}<br>
+                                        Zip/Postal Code: {{config path=“general/store_information/postcode”}}<br>
+                                        City: {{config path=“general/store_information/city”}}<br>
+                                        Street Address 1: {{config path=“general/store_information/street_line1”}}<br>
+                                        Street Address 2: {{config path=“general/store_information/street_line2”}}<br>
+                                        Store Contact Address: {{config path=“general/store_information/address”}}<br>
+                                        Customer Account URL: {{var this.getUrl($store, ‘customer/account/’)}}<br>
+                                        Customer Email: {{var customer.email}}<br>
+                                        Customer Name: {{var customer.name}}<br>
+                                        Billing Address: {{var formattedBillingAddress|raw}}<br>
+                                        Email Order Note: {{var order.getEmailCustomerNote()}}<br>
+                                        Order ID: {{var order.increment_id}}<br>
+                                        Order Items Grid: {{layout handle=“sales_email_order_items” order=$order area=“frontend”}}<br>
+                                        Payment Details: {{var payment_html|raw}}<br>
+                                        Shipping Address: {{var formattedShippingAddress|raw}}<br>
+                                        Shipping Description: {{var order.getShippingDescription()}}</div>
+
+                                    <p>The selection of available variables depends on which template you use as a basis. The template-specific variables are contained in a <span class="type--bold">&lt;!--@vars @--&gt;</span> comment at the top of each template on the file system.</p>
+                                    <div class="boxed bg--secondary boxed--lg boxed--border"><span class="type--bold">TIP</span>: You can also create your own custom variables and set their values in the Admin, under <span class="type--bold">SYSTEM</span> > <span class="type--bold">Custom Variables</span>.
+                                    </div>
+                                    <p>You can customize email content using either the theme or admin customization methods discussed previously.</p>
+                                    <br>
+                                    <br>
+                                    <h3>Customize Email Styles</h3>
+                                    <p>To customize theme-specific variables for email templates, you can add new CSS rules or modify existing ones in the file <span class="type--bold">_email-variables.less</span>, which is located at</p>
+                                    <pre>app/design/frontend/[themeVendor]/[theme]/web/css/source/_email-variables.less</pre>
+                                    <p>To extend or modify theme-specific styles of email templates, you can add new CSS rules in the file <span class="type--bold">_email-extend.less</span>, which is located at</p>
+                                    <pre>app/design/frontend/[themeVendor]/[theme]/web/css/source/_email-extend.less</pre>
+                                    <br>
+                                    <p><span class="type--bold">TIP</span>: Learn more about how styles work in Magento <a href="https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/templates/template-email.html#email-styles" target="_blank">here ↗</a>. </p>
+                                    <br>
+                                    <br>
+                                    <h3>Modification Example</h3>
+                                    <p>Let’s put everything together and modify the following:</p>
+                                    <ol class="process-3">
+                                        <li class="process_item">
+                                            <div class="process__number"><span>1</span></div>
+                                            <div class="process__body">
+                                                <p> Change the background color of the emails in the <span class="type--bold">header</span> template </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>2</span></div>
+                                            <div class="process__body">
+                                                <p> Change the links located in the <span class="type--bold">footer</span> template </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>3</span></div>
+                                            <div class="process__body">
+                                                <p> Change the heading text “<span class="type--bold">Thanks for your order, John</span>” and its color in the <span class="type--bold">New Order email</span> template </p>
+                                            </div>
+                                        </li>
+                                        <li class="process_item">
+                                            <div class="process__number"><span>4</span></div>
+                                            <div class="process__body">
+                                                <p> Add the text “<span class="type--bold">Hello World</span>” under the order number in the <span class="type--bold">New Order</span> email template </p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                    
+                                    <h4>Change Background Color</h4>
+                                    <p>Most of the time, the background color of emails is defined only in the file <span class="type--bold">header.html</span> in the <span class="type--bold">[theme]/Magento_Email/email</span> directory (although it is not a rule).</p>
+                                    <p>To replace the default background color search for places where it is defined and replace it. For example,</p>
+                                    <pre>&lt;html bgcolor="#F7F8F8" style="background-color:#F7F8F8"&gt;</pre>
+                                    <br>
+                                    
+                                    <h4>Change Links in Footer</h4>
+                                    <p>To modify links defined in the <span class="type--bold">footer</span> template, open the template called <span class="type--bold">footer.html</span> in the <span class="type--bold">[theme]/Magento_Email/email</span> directory. Then locate the links and replace the hyperlinks defined in the <span class="type--bold">href</span> tag and the anchor text, which is the visible text in the footer:</p>
+                                    <pre>&lt;a href="http://www.example.com"&gt;Example Anchor Text&lt;/a&gt;</pre>
+                                    <br>
+                                    
+                                    <h4>Change Heading Text</h4>
+                                    <p>To modify the heading text, “<span class="type--bold">Thanks for your order, John</span>” in the <span class="type--bold">New Order</span> email template, open the template called <span class="type--bold">order_new.html</span> in the <span class="type--bold">[theme]/Magento_Sales/email</span> directory. Locate the line where the trans directive “<span class="type--bold">Thanks for your order %name</span>” is displayed:</p>
+                                    <pre>&lt;h1&gt;{{trans "&lt;span&gt;Thanks&lt;/span&gt; for your order %name" name=$order.getCustomerFirstname() |raw}}&lt;/h1&gt;</pre>
+                                    <p>Now you see the text is wrapped in the <span class="type--bold">H1</span> tag. Open the CSS file called <span class="type--bold">_email-extend.less</span> in the <span class="type--bold">[theme]/web/css/source</span> directory. Locate the line where the color for the <span class="type--bold">H1</span> tag is defined. For example,</p>
+                                    <pre>.email-summary {
+    td {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        
+        h1 {
+            margin-bottom: 4px;
+            padding-bottom: 0;
+            border-bottom: 0;
+            <span class="type--bold">color: @text-highlight__color;</span>
+            font-weight: bold;
+        }</pre>
+                                    <p>You can directly replace its color in this file. Alternatively, as you can see in this example, it is using a variable value defined in the file <span class="type--bold">_email-variables.less</span> in the <span class="type--bold">[theme]/web/css/source</span> directory.</p>
+                                    <pre>@text-highlight__color: #7B858B;</pre>
+                                    <br>
+                                    <h4>Add Text</h4>
+                                    <p>To add new text in the <span class="type--bold">New order</span> email template, open the template called <span class="type--bold">order_new.html</span> in the <span class="type--bold">[theme]/Magento_Sales/email</span> directory. Locate the line where the order number is displayed:</p>
+                                    <pre>&lt;h3&gt;{{trans "Order #&lt;span class="no-link"&gt;%increment_id&lt;/span&gt;" increment_id=$order.increment_id |raw}}&lt;/h3&gt;</pre>
+                                    <p>under the line paste the following:</p>
+                                    <pre>{{trans "Hello World"}}</pre>
+                                    
+                                    <br>
+                                    <h3>Graphics in Emails</h3>
+                                    <p>You can’t send graphics along with your email. The only way to do that is to host the graphics on a server and then insert the code into your HTML emails to download the graphics when the message is opened.</p>
+                                    <p>It is important to note that HTML emails generally only support absolute paths to links and images embedded within your emails. The absolute path provides the complete HTTP address: the protocol, domain, directory path, and file name with its suffix.</p>
+                                    <pre>https://themes.email/images/banner.png</pre>
+                                    <br>
+                                    <br>
+                                    <h3>Where to Host Images</h3>
+                                    <p>If you’re sending emails to thousands of people per day, then consider storing your images on a content delivery network (CDN), such as Amazon’s CloudFront. Otherwise, uploading your image to your Magento will be enough.</p>
+                                    <p>A good tip is to upload all your images at the very beginning so that you have absolute paths to images from the start.</p>
+                                    <br>
+                                    <br>
+                                    <h3>Linking to an Image in HTML</h3>
+                                    <p>In HTML, use absolute paths that point back to your Magento or CDN where the image is located:</p>
+                                    <pre>&lt;img src="https://themes.email/images/banner.png" alt="Banner"&gt;</pre>
+                                    <br>
+                                    <br>
+                                    <h3>Image Formats</h3>
+                                    <p>The three most common formats predominantly used in emails are JPEG, GIF, and PNG. Here are the best use cases for all the image file formats:</p>
+                                    <ul class="bullets">
+                                        <li><span class="type--bold">JPEG</span>: To showcase photographs of real-world elements and stock photographs</li>
+                                        <li><span class="type--bold">GIF</span>: To show any animation or blend elements that don’t use many colors in the backgrounds</li>
+                                        <li><span class="type--bold">PNG</span>: When you need your image to blend in with the background color</li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h3>Retina Images</h3>
+                                    <p>A high-density display has double the pixel density of a standard display. This means a container of 600 px containing the image of 600 px will be stretched to 1200 px. Therefore, the image will also stretch to 1200 px and become blurred out. It is a good practice to have an image of 1200 px squeezed inside a container of 600 px to render a pixel-perfect image in your emails.</p>
+                                    <br>
+                                    <br>
+                                    <h3>Videos</h3>
+                                    <p> Many email clients can’t support video rendering, so avoid videos altogether. </p>
+                                    <br>
+                                    <br>
+
                                 </div>
                             </article>
                         </div>

@@ -83,7 +83,13 @@
                                         <img class="boxed boxed--border box-shadow" alt="How to Add Custom Fonts in Magento Order Emails" src="../img/tutorials/magento/fonts.png">
                                         <figcaption>How to Add Custom Fonts in Magento Order Emails</figcaption>
                                     </figure>
-                                    <p> Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances. </p>
+                                    <p> Order emails inherit the custom fonts that are defined by the frontend theme. Therefore, you can use custom fonts in your order emails that are already defined in your theme. </p>
+                                    <p> If the custom fonts are not defined in your frontend theme, then first follow the tutorial on how to add custom fonts to your theme described in the Magento <a href="https://devdocs.magento.com/guides/v2.0/frontend-dev-guide/css-topics/using-fonts.html" target="_blank">documentation ↗</a>. </p>
+                                    <p>Once your theme contains a new font, you need to update the <span class="type--bold">source/_variables.less</span> and <span class="type--bold">source/_typography.less</span> files for your custom theme to refer to the new font. For example,</p>
+                                    <pre>@font-family__base: MyNewFont,sans-serif;</pre>
+                                    <p>The same goes for the <span class="type--bold">Magento_Email/email/header.html</span> and <span class="type--bold">Magento_Email/email/footer.html</span> files. For example,</p>
+                                    <pre>font-family:MyNewFont,sans-serif;</pre>
+                                    <p>After updating, the emails should automatically use the specified font.</p>
                                 </div>
                             </article>
                         </div>

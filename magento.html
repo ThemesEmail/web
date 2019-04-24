@@ -286,35 +286,47 @@
             <section class="switchable space--sm">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-6 text-center"><div class="switchable__text">
-                            <div class="video-cover border--round">
-                                <div class="background-image-holder"> <img alt="Setting Up PrestaShop Email Templates" src="img/installation_mg.svg"> </div>
-                                <div class="video-play-icon"></div> <iframe data-src="https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1" allowfullscreen="allowfullscreen"></iframe> </div> <span><span class="type--bold">TIP: </span>How to Use FTP — <a target="_blank" href="https://www.wikihow.com/Use-FTP">Learn More  ↗</a></span> </div></div>
+                        <div class="col-md-6 text-center">
+                            <div class="switchable__text">
+                                <div class="video-cover border--round">
+                                    <div class="background-image-holder"> <img alt="Setting Up Magento Email Templates" src="img/installation_mg.svg"> </div>
+                                    <div class="video-play-icon"></div> <iframe data-src="https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1" allowfullscreen="allowfullscreen"></iframe> </div> <span><span class="type--bold">TIP: </span>How to Use FTP — <a target="_blank" href="https://www.wikihow.com/Use-FTP">Learn More  ↗</a></span> 
+                            </div>
+                            <div class="switchable__text text-left">
+                                <div class="type--bold">Note</div>
+                                <div><p>Email templates only work for Magento version 2.x and above. If you want to purchase an older version for Magento 1.9, please</p><a href="helpdesk.html">Contact Us >></a></div>
+                            </div>
+                        </div>
                         <div class="col-md-6 col-lg-5">
                             <h2>Setting Up Email Templates</h2>
                             <ol class="process-3">
                                 <li class="process_item">
                                     <div class="process__number"><span>1</span></div>
                                     <div class="process__body">
-                                        <h4>Step 1</h4>
-                                        <p> xxx </p>
+                                        <h4>Connect to FTP</h4>
+                                        <p> Locate your <span class="type--bold">active</span> theme. For example, </p>
+                                        <pre>app/design/frontend/[themeVendor]/[theme]/</pre>
                                     </div>
                                 </li>
                                 <li class="process_item">
                                     <div class="process__number"><span>2</span></div>
                                     <div class="process__body">
-                                        <h4>Step 2</h4>
-                                        <p> xxx </p>
+                                        <h4>Upload Files via FTP</h4>
+                                        <p> Upload the content of the email template folder (<span class="type--bold">Magento_Contact, Magento_Customer, Magento_Email</span>, etc.) to the folder of your active theme. For example, </p><pre>app/design/frontend/[themeVendor]/[theme]/Magento_Contact/<br>app/design/frontend/[themeVendor]/[theme]/Magento_Customer/<br>app/design/frontend/[themeVendor]/[theme]/Magento_Email/<br>etc.</pre>
                                     </div>
                                 </li>
                                 <li class="process_item">
                                     <div class="process__number"><span>3</span></div>
                                     <div class="process__body">
-                                        <h4>Step 3</h4>
-                                        <p> xxx </p>
+                                        <h4>Clear the Cache through the Admin Panel</h4>
+                                        <p> Go to <span class="type--bold">System > Tools > Cache Management</span> and make sure to flush all caches. </p>
                                     </div>
                                 </li>
                             </ol>
+                            <div class="switchable__text text-left">
+                                <div class="type--bold">Note</div>
+                                <div> This email template is now your default, theme-specific template for the given Magento theme. Try to send a test order from your Magento store. </div>
+                            </div>
                         </div>
                     </div>
                 </div>

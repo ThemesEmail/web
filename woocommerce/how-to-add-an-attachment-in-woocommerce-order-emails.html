@@ -90,14 +90,14 @@
  * More tips: https://themes.email/woocommerce.html
  */
 
-add_filter( ‘woocommerce_email_attachments’, ‘attach_to_wc_emails’, 10, 3);
+add_filter( 'woocommerce_email_attachments', 'attach_to_wc_emails', 10, 3);
 
 function attach_to_wc_emails ( $attachments , $id, $object ) {
 
-	$file_path = get_template_directory() . ‘/file.pdf’; // directory of the current theme
+	$file_path = get_template_directory() . '/file.pdf'; // directory of the current theme
 
  	 // if a child theme is being used then use this line to get the directory
- 	// $file_path = get_stylesheet_directory() . ‘/file.pdf’;
+ 	// $file_path = get_stylesheet_directory() . '/file.pdf';
 
 	$attachments[] = $file_path;
 	return $attachments;

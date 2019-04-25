@@ -244,15 +244,15 @@
                                             <div class="process__body">
                                                 <p> Edit the <span class="type--bold">width</span> and <span class="type--bold">height</span> attributes of the logo </p>
                                                 <pre>{{if logo_width}}
-    width=“{{var logo_width}}”
+    width="{{var logo_width}}"
 {{else}}
-    width=“200”
+    width="200"
 {{/if}}
 
 {{if logo_height}}
-    height=“{{var logo_height}}”
+    height="{{var logo_height}}"
 {{else}}
-    height=“100”
+    height="100"
 {{/if}}</pre>
                                             </div>
                                         </li>
@@ -263,39 +263,39 @@
                                     <p>To add the store and sales-related information to a template, use system variables. System variables are placeholders that are replaced by particular values when the actual email is generated.</p>
                                     <div class="boxed bg--secondary boxed--lg boxed--border">
                                         <div class="type--bold">Here is a list of the most commonly used email template variables:</div>  
-                                        Email Footer Template: {{template config_path=“design/email/footer_template”}}<br>
-                                        Email Header Template: {{template config_path=“design/email/header_template”}}<br>
+                                        Email Footer Template: {{template config_path="design/email/footer_template"}}<br>
+                                        Email Header Template: {{template config_path="design/email/header_template"}}<br>
                                         Email Logo Image Alt: {{var logo_alt}}<br>
                                         Email Logo Image URL: {{var logo_url}}<br>
                                         Email Logo Image Height: {{var logo_height}}<br>
                                         Email Logo Image Width: {{var logo_width}}<br>
                                         Template CSS: {{var template_styles|raw}}<br>
-                                        Base Unsecure URL: {{config path=“web/unsecure/base_url”}}<br>
-                                        Base Secure URL: {{config path=“web/secure/base_url”}}<br>
-                                        General Contact Name: {{config path=“trans_email/ident_general/name”}}<br>
-                                        Sales Representative Contact Name: {{config path=“trans_email/ident_sales/name”}}<br>
-                                        Sales Representative Contact Email: {{config path=“trans_email/ident_sales/email”}}<br>
-                                        Custom1 Contact Name: {{config path=“trans_email/ident_custom1/name”}}<br>
-                                        Custom1 Contact Email: {{config path=“trans_email/ident_custom1/email”}}<br>
-                                        Custom2 Contact Name: {{config path=“trans_email/ident_custom2/name”}}<br>
-                                        Custom2 Contact Email: {{config path=“trans_email/ident_custom2/email”}}<br>
-                                        Store Name: {{config path=“general/store_information/name”}}<br>
-                                        Store Phone Number: {{config path=“general/store_information/phone”}}<br>
-                                        Store Hours: {{config path=“general/store_information/hours”}}<br>
-                                        Country: {{config path=“general/store_information/country_id”}}<br>
-                                        Region/State: {{config path=“general/store_information/region_id”}}<br>
-                                        Zip/Postal Code: {{config path=“general/store_information/postcode”}}<br>
-                                        City: {{config path=“general/store_information/city”}}<br>
-                                        Street Address 1: {{config path=“general/store_information/street_line1”}}<br>
-                                        Street Address 2: {{config path=“general/store_information/street_line2”}}<br>
-                                        Store Contact Address: {{config path=“general/store_information/address”}}<br>
-                                        Customer Account URL: {{var this.getUrl($store, ‘customer/account/’)}}<br>
+                                        Base Unsecure URL: {{config path="web/unsecure/base_url"}}<br>
+                                        Base Secure URL: {{config path="web/secure/base_url"}}<br>
+                                        General Contact Name: {{config path="trans_email/ident_general/name"}}<br>
+                                        Sales Representative Contact Name: {{config path="trans_email/ident_sales/name"}}<br>
+                                        Sales Representative Contact Email: {{config path="trans_email/ident_sales/email"}}<br>
+                                        Custom1 Contact Name: {{config path="trans_email/ident_custom1/name"}}<br>
+                                        Custom1 Contact Email: {{config path="trans_email/ident_custom1/email"}}<br>
+                                        Custom2 Contact Name: {{config path="trans_email/ident_custom2/name"}}<br>
+                                        Custom2 Contact Email: {{config path="trans_email/ident_custom2/email"}}<br>
+                                        Store Name: {{config path="general/store_information/name"}}<br>
+                                        Store Phone Number: {{config path="general/store_information/phone"}}<br>
+                                        Store Hours: {{config path="general/store_information/hours"}}<br>
+                                        Country: {{config path="general/store_information/country_id"}}<br>
+                                        Region/State: {{config path="general/store_information/region_id"}}<br>
+                                        Zip/Postal Code: {{config path="general/store_information/postcode"}}<br>
+                                        City: {{config path="general/store_information/city"}}<br>
+                                        Street Address 1: {{config path="general/store_information/street_line1"}}<br>
+                                        Street Address 2: {{config path="general/store_information/street_line2"}}<br>
+                                        Store Contact Address: {{config path="general/store_information/address"}}<br>
+                                        Customer Account URL: {{var this.getUrl($store, 'customer/account/')}}<br>
                                         Customer Email: {{var customer.email}}<br>
                                         Customer Name: {{var customer.name}}<br>
                                         Billing Address: {{var formattedBillingAddress|raw}}<br>
                                         Email Order Note: {{var order.getEmailCustomerNote()}}<br>
                                         Order ID: {{var order.increment_id}}<br>
-                                        Order Items Grid: {{layout handle=“sales_email_order_items” order=$order area=“frontend”}}<br>
+                                        Order Items Grid: {{layout handle="sales_email_order_items" order=$order area="frontend"}}<br>
                                         Payment Details: {{var payment_html|raw}}<br>
                                         Shipping Address: {{var formattedShippingAddress|raw}}<br>
                                         Shipping Description: {{var order.getShippingDescription()}}</div>
@@ -333,13 +333,13 @@
                                         <li class="process_item">
                                             <div class="process__number"><span>3</span></div>
                                             <div class="process__body">
-                                                <p> Change the heading text “<span class="type--bold">Thanks for your order, John</span>” and its color in the <span class="type--bold">New Order email</span> template </p>
+                                                <p> Change the heading text "<span class="type--bold">Thanks for your order, John</span>" and its color in the <span class="type--bold">New Order email</span> template </p>
                                             </div>
                                         </li>
                                         <li class="process_item">
                                             <div class="process__number"><span>4</span></div>
                                             <div class="process__body">
-                                                <p> Add the text “<span class="type--bold">Hello World</span>” under the order number in the <span class="type--bold">New Order</span> email template </p>
+                                                <p> Add the text "<span class="type--bold">Hello World</span>" under the order number in the <span class="type--bold">New Order</span> email template </p>
                                             </div>
                                         </li>
                                     </ol>
@@ -357,7 +357,7 @@
                                     <br>
                                     
                                     <h4>Change Heading Text</h4>
-                                    <p>To modify the heading text, “<span class="type--bold">Thanks for your order, John</span>” in the <span class="type--bold">New Order</span> email template, open the template called <span class="type--bold">order_new.html</span> in the <span class="type--bold">[theme]/Magento_Sales/email</span> directory. Locate the line where the trans directive “<span class="type--bold">Thanks for your order %name</span>” is displayed:</p>
+                                    <p>To modify the heading text, "<span class="type--bold">Thanks for your order, John</span>" in the <span class="type--bold">New Order</span> email template, open the template called <span class="type--bold">order_new.html</span> in the <span class="type--bold">[theme]/Magento_Sales/email</span> directory. Locate the line where the trans directive "<span class="type--bold">Thanks for your order %name</span>" is displayed:</p>
                                     <pre>&lt;h1&gt;{{trans "&lt;span&gt;Thanks&lt;/span&gt; for your order %name" name=$order.getCustomerFirstname() |raw}}&lt;/h1&gt;</pre>
                                     <p>Now you see the text is wrapped in the <span class="type--bold">H1</span> tag. Open the CSS file called <span class="type--bold">_email-extend.less</span> in the <span class="type--bold">[theme]/web/css/source</span> directory. Locate the line where the color for the <span class="type--bold">H1</span> tag is defined. For example,</p>
                                     <pre>.email-summary {
@@ -468,7 +468,7 @@
                             <div class="cta">
                                 <a class="btn btn--primary btn--lg type--uppercase" href="https://codecanyon.net/item/magento-email-templates/11833859"> 
                                     <span class="btn__text">Purchase Email Templates</span>
-                                    <span class="label">$35 USD</span> </a>
+                                    <span class="label">$45 USD</span> </a>
                                 <p class="lead"> Each purchase of MET comes with 20 different styles —<br> and a lifetime of free fresh designs & bug-fix updates. </p>
                                 <p class="type--fine-print">One purchase for all your <a href="#">future projects</a>.</p>
                             </div>

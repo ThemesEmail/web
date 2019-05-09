@@ -93,7 +93,7 @@
 
     function woocommerce_order_item_link( $item_name, $item, $bool ) {
         $url = get_permalink( $item['product_id'] ) ;
-        return '<a href="'. $url .'">'. $item_name .'</a>'; 
+        return '&lt;a href="'. $url .'"&gt;'.$item_name .'&lt;/a&gt;'; 
     }
 </pre>
                                 </div>
